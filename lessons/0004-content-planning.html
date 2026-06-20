@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 4: 内容规划能力 — 战略型游戏策划</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="lesson-meta">Module 4 · 内容规划 · 预计阅读 30 分钟</div>
+  <h1>📅 内容规划能力：让玩家始终有事可做</h1>
+  <p style="font-size:1.1rem; color: var(--color-muted); margin-bottom: 2em;">
+    玩家会消耗内容。不会规划 = 游戏上线 2 周就凉。
+  </p>
+
+  <!-- ═══ Progress ═══ -->
+  <div class="progress-section">
+    <div style="display:flex; justify-content:space-between; font-family:var(--font-heading); font-size:0.8rem; margin-bottom:0.3rem;">
+      <span>学习进度</span>
+      <span>8 个模块 · 当前: 4/8</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" style="width:50%"></div>
+    </div>
+    <div class="progress-labels">
+      <span>系统思维</span>
+      <span>玩家心理学</span>
+      <span>经济设计</span>
+      <span style="font-weight:700; color:var(--color-accent);">内容规划 ◀</span>
+      <span>决策能力</span>
+      <span>商业化</span>
+      <span>长线运营</span>
+      <span>产品分析</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 1: WHY -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>🎯 为什么内容规划是高级策划的必备能力？</h2>
+
+  <div class="case-study">
+    <p>某二次元手游——上线首日下载量 300 万，首月流水 2 亿。核心团队兴奋不已。</p>
+    <p>然后问题来了：</p>
+    <ul>
+      <li>开服 2 周，第一批玩家通完了所有主线关卡</li>
+      <li>开服 3 周，所有副本被刷穿</li>
+      <li>开服 1 个月——<em>无事可做</em></li>
+      <li>游戏内开始出现"长草期"（玩家自嘲：头像长草了）</li>
+      <li>开服第 45 天：DAU 从 300 万跌到 30 万</li>
+      <li>团队紧急加班赶版本——2 个月后新版本上线——但回来的玩家不到 20%</li>
+    </ul>
+    <p><strong>这一切本可以避免。</strong></p>
+  </div>
+
+  <div class="insight">
+    <strong>核心洞察</strong>
+    游戏行业有一种常见的死法：<strong>内容断档</strong>。团队花 2 年做的内容、玩家 2 周就吃完了，然后无事可做等着下一个版本。<strong>内容规划 = 你的内容生产和玩家消费之间的时间赛跑。</strong>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 2: Content Pyramid -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>1️⃣ 内容类型金字塔</h2>
+
+  <p>所有游戏的内容可以分为四个层次，越往下"产量越大"，越往上"品质越高"：</p>
+
+  <div style="margin:1.5rem auto; max-width:500px;">
+    <div style="padding:1rem 1.5rem; margin:0.3rem 0; border-radius:8px; background:linear-gradient(135deg, #fef3c7, #fde68a); border:2px solid #f59e0b; text-align:center;">
+      <strong style="color:#92400e;">🏔️ 版本内容</strong>
+      <p style="font-size:0.85rem; margin:0.2rem 0 0; color:#78350f;">新地图/新系统/新等级 · 每 3-4 月</p>
+    </div>
+    <div style="padding:1rem 1.5rem; margin:0.3rem 0; border-radius:8px; background:linear-gradient(135deg, #dbeafe, #93c5fd); border:2px solid #3b82f6; text-align:center;">
+      <strong style="color:#1e40af;">🌊 周期内容</strong>
+      <p style="font-size:0.85rem; margin:0.2rem 0 0; color:#1e3a8a;">周常/竞技赛季/活动 · 每周-每月</p>
+    </div>
+    <div style="padding:1rem 1.5rem; margin:0.3rem 0; border-radius:8px; background:linear-gradient(135deg, #f0fdf4, #bbf7d0); border:2px solid #22c55e; text-align:center;">
+      <strong style="color:#166534;">💧 日常内容</strong>
+      <p style="font-size:0.85rem; margin:0.2rem 0 0; color:#14532d;">每日任务/日常副本 · 每天</p>
+    </div>
+    <div style="padding:1rem 1.5rem; margin:0.3rem 0; border-radius:8px; background:linear-gradient(135deg, #f3f4f6, #d1d5db); border:2px solid #6b7280; text-align:center;">
+      <strong style="color:#374151;">🪨 基础内容</strong>
+      <p style="font-size:0.85rem; margin:0.2rem 0 0; color:#1f2937;">核心玩法 · 永远在线</p>
+    </div>
+  </div>
+
+  <p><strong>🔑 设计原则：每一层的内容都要服务于不同的目的</strong></p>
+
+  <table>
+    <thead><tr><th>层级</th><th>时间尺度</th><th>目标</th><th>占比</th></tr></thead>
+    <tbody>
+      <tr><td>🏔️ 版本内容</td><td>3-4 月</td><td>吸引回归、制造话题、大事件</td><td>〜10% 的开发投入</td></tr>
+      <tr><td>🌊 周期内容</td><td>每周/月</td><td>提供节奏感、周目标</td><td>〜20%</td></tr>
+      <tr><td>💧 日常内容</td><td>每天</td><td>维持活跃、养成习惯</td><td>〜30%</td></tr>
+      <tr><td>🪨 基础内容</td><td>永远</td><td>核心循环、玩法乐趣</td><td>〜40%</td></tr>
+    </tbody>
+  </table>
+
+  <div class="insight">
+    <strong>很多策划犯的错误</strong>
+    太重视"版本内容"（新地图新角色好嗨哦），忽略了"日常内容"和"基础内容"。<br>
+    结果是：版本更新时活跃度冲一下，然后迅速回落。<strong>真正决定留存的是日常和基础内容的质量。</strong>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 3: Consumption Speed -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>2️⃣ 内容消耗速度的计算</h2>
+
+  <p>这是内容规划里最核心的量化能力——<strong>算清楚玩家的"吃饭速度"</strong>。</p>
+
+  <div class="concept-card">
+    <h3>📊 内容消耗公式</h3>
+    <div style="padding:1rem; background:#f5f3ff; border-radius:8px; text-align:center; margin:0.5rem 0;">
+      <p style="font-size:1.2rem; font-weight:700; color:var(--color-accent);">内容消耗速度 = 玩家日均游戏时长 × 效率</p>
+    </div>
+    <p><strong>例子 — 你的传奇世界无双：</strong></p>
+    <ul>
+      <li>一个主线副本耗时 5 分钟</li>
+      <li>日均在线 2 小时的玩家可以打 24 轮</li>
+      <li>一天消耗 24 个副本的内容量</li>
+      <li>一周消耗 168 个副本 = 一个中型副本集群</li>
+      <li>你团队一周能做几个副本？</li>
+    </ul>
+    <p>如果团队一周做 5 个副本，但核心玩家一周消耗 168 个副本的内容——<strong>这就是内容断档的根源</strong>。</p>
+  </div>
+
+  <blockquote class="warn">
+    <strong>⚠️ 反直觉的事实：</strong>你永远无法在生产速度上超过核心玩家的消耗速度。所以设计的重点不是"缩短版本间隔"，而是<strong>用机制延长内容的消耗时间</strong>——体力系统、随机词条、每日上限。
+  </blockquote>
+
+  <h3>延长内容消耗时间的常用手段</h3>
+  <table>
+    <thead><tr><th>手段</th><th>原理</th><th>代价</th></tr></thead>
+    <tbody>
+      <tr><td><strong>体力系统</strong></td><td>每天只能打 N 次</td><td>玩家想多玩也不行</td></tr>
+      <tr><td><strong>随机掉落</strong></td><td>打再多也不一定出你要的</td><td>可能让人挫败</td></tr>
+      <tr><td><strong>难度分层</strong></td><td>普通/困难/地狱 → 三个难度三倍消耗</td><td>换皮感</td></tr>
+      <tr><td><strong>日常任务</strong></td><td>每天做一样的任务领奖励</td><td>可能无聊（打工感）</td></tr>
+      <tr><td><strong>周常限制</strong></td><td>每周只能打一次的高奖励副本</td><td>可延长数周的内容</td></tr>
+      <tr><td><strong>季节/事件限定</strong></td><td>特定时间才能打的内容</td><td>错过就没了（FOMO）</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>好的内容规划不是"做更多内容"，而是"让有限的内容被更有效地消费"。</strong></p>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 4: Version Rhythm -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>3️⃣ 版本节奏设计</h2>
+
+  <div class="concept-card">
+    <h3>🗓️ 标准版本节奏</h3>
+
+    <div style="margin:1rem 0; padding:1rem; background:white; border:2px solid var(--color-line); border-radius:10px;">
+      <table>
+        <thead><tr><th>版本周期</th><th>做什么</th><th>目的</th></tr></thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:700;">版本第 1 周</td>
+            <td>新剧情、新副本上线</td>
+            <td>核心玩家冲击新内容</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">版本第 2 周</td>
+            <td>高难挑战开放</td>
+            <td>硬核玩家</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">版本第 3 周</td>
+            <td>社交活动（公会战/组队）</td>
+            <td>社交玩家</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">版本第 4 周</td>
+            <td>双倍掉落/Buff 周</td>
+            <td>休闲玩家追赶</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">版本第 5-6 周</td>
+            <td>收尾活动 + 下版本预告</td>
+            <td>维持活跃 → 期待值管理</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>每个版本的每个阶段服务于不同玩家</strong>——这就是内容规划的艺术。</p>
+  </div>
+
+  <h3>⏰ 内容节奏的黄金法则</h3>
+
+  <div class="system-diagram" style="flex-direction:column;">
+    <div style="display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:center;">
+      <span class="node positive">新版本发布</span>
+      <span class="arrow">→</span>
+      <span class="node neutral">内容消耗期中</span>
+      <span class="arrow">→</span>
+      <span class="node negative">内容消耗完毕（临界点）</span>
+      <span class="arrow">→</span>
+      <span class="node positive">下个版本发布</span>
+    </div>
+    <div class="label" style="margin-top:0.5rem; font-weight:700; color:var(--color-accent);">
+      新版本必须在临界点之前发布
+    </div>
+  </div>
+
+  <p><strong>如果临界点到了，下个版本还没来 → 长草期 → 流失</strong></p>
+
+  <div class="compare-grid">
+    <div class="side bad">
+      <h4>❌ 坏节奏</h4>
+      <p>大版本 → 6 周长草 → 大版本 → 又长草</p>
+      <p>活跃度曲线：山峰 → 峡谷 → 山峰 → 峡谷<br>每次峡谷都有人走</p>
+    </div>
+    <div class="side good">
+      <h4>✅ 好节奏</h4>
+      <p>大版本 → 小活动 → 周常 → 活动 → 大版本</p>
+      <p>活跃度曲线：高峰 → 中高 → 中 → 小高峰 → 高峰<br>始终有事做</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 5: Battle Pass -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>4️⃣ 战斗通行证（Battle Pass）设计</h2>
+
+  <p>Battle Pass 是过去 10 年游戏行业最重要的内容规划创新之一。</p>
+
+  <table>
+    <thead><tr><th>版本</th><th>代表</th><th>模式</th></tr></thead>
+    <tbody>
+      <tr><td>1.0 时代</td><td>传统<br>+1. Dota 2 大行动</td><td>买断制 DLC，买了一次性内容</td></tr>
+      <tr><td>2.0 时代</td><td>Fortnite 第 2 章</td><td>赛季制 BP，打满返还代币，梯级奖励</td></tr>
+      <tr><td>3.0 时代</td><td>原神、CODM</td><td>付费+免费双轨，时间有限，经验驱动</td></tr>
+    </tbody>
+  </table>
+
+  <div class="concept-card">
+    <h3>🎫 BP 的核心设计要素</h3>
+    <ol>
+      <li><strong>双轨制</strong>——免费轨（所有人都能拿） + 付费轨（买了才有）</li>
+      <li><strong>时间有限</strong>——错过就没了（FOMO 驱动）</li>
+      <li><strong>经验驱动</strong>——做任务升级，而不是氪金直接买</li>
+      <li><strong>奖励递进</strong>——前期奖励密集（快速建立获得感），后期放稀有奖励（坚持到最后的回报）</li>
+      <li><strong>投入感</strong>——买了就不会浪费（沉没成本）</li>
+    </ol>
+
+    <blockquote class="good">
+      <strong>💡 为什么 BP 比直接卖道具好？</strong>
+      直接卖道具：玩家付钱 → 拿到 → 结束。<br>
+      BP：玩家付钱 → 每天上线做任务 → 连续 X 天 → 拿到奖励。<br>
+      BP 的本质是<em>把一次性付费转化成了持续活跃的动力</em>。
+    </blockquote>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 6: Case Studies -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>5️⃣ 经典案例分析</h2>
+
+  <div class="case-study">
+    <h3 style="margin-top:0;">📋 案例 1：《原神》的版本节奏</h3>
+    <p><strong>版本周期：</strong>6 周一个版本（42 天）</p>
+    <p><strong>每版本核心内容：</strong></p>
+    <ul>
+      <li>1-2 个新角色 + 对应的角色试用/传说任务</li>
+      <li>新剧情（约 2-3 小时的主线）</li>
+      <li>新地图区域（大版本才有）</li>
+      <li>新活动（3-4 个小型活动穿插）</li>
+      <li>新 Boss / 新副本</li>
+    </ul>
+    <p><strong>节奏分析：</strong></p>
+    <ul>
+      <li><strong>第 1 周</strong>：新内容冲浪期（活跃度飙高）</li>
+      <li><strong>第 2-3 周</strong>：活动密集期（每周一个新活动）</li>
+      <li><strong>第 4 周</strong>：活动收尾+下一个版本的"预告"（制造期待）</li>
+      <li><strong>第 5-6 周</strong>：长草期（但因为有预告和新版本的期待，玩家不会走）</li>
+    </ul>
+    <p><strong>聪明之处：</strong>原神用 42 天的版本周期，把"长草期"变成了"期待期"。而且树脂系统确保了日常内容消耗永远有节奏。</p>
+  </div>
+
+  <div class="case-study">
+    <h3 style="margin-top:0;">📋 案例 2：Fortnite 的"事件营销"</h3>
+    <p><strong>经典事件：</strong>第 2 章第 8 赛季末——一个巨大的"立方体"在岛上出现了一个月后爆炸，改变了整个地图。</p>
+    <p><strong>内容规划的精妙之处：</strong></p>
+    <ol>
+      <li><strong>预告期</strong>（1 周）：立方体出现，玩家好奇 → 每天上线观察变化</li>
+      <li><strong>发展期</strong>（2 周）：立方体移动/释放能量/产生小事件 → 每周有新变化</li>
+      <li><strong>高潮期</strong>（3 天）：倒计时 + 警报 → 活跃度飙升</li>
+      <li><strong>事件</strong>：爆炸 → 地图永久改变 → 社交媒体刷屏</li>
+      <li><strong>延续期</strong>：新赛季开始，新地图探索</li>
+    </ol>
+    <p><strong>启示：</strong>一次大事件 = 至少 5-6 周的持续内容，而不只是一个"更新公告"。</p>
+  </div>
+
+  <div class="case-study">
+    <h3 style="margin-top:0;">📋 案例 3：《COC》的更新策略</h3>
+    <p><strong>更新频率：</strong>大更新约 4-6 个月一次，中间有小平衡性调整。</p>
+    <p><strong>核心设计：</strong></p>
+    <ul>
+      <li>每次大更新：+ 新建筑等级 + 新兵种等级 + 新的进攻机制</li>
+      <li>升级时间本身就是内容规划工具——<strong>10 天的升级时间 = 10 天你不会离开</strong></li>
+      <li>升级队列是有限的 → 玩家需要选择升级什么 → 选择性本身创造了策略深度</li>
+    </ul>
+    <p><strong>启示：</strong>COC 不需要频繁出"新副本"，因为<strong>升级时间本身就是内容的消耗</strong>。这是很多策划忽略的内容规划维度。</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 7: Practice -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>🛠️ 实践练习</h2>
+
+  <div class="exercise">
+    <h3>✏️ 练习：设计一个版本内容日历</h3>
+
+    <div class="step">
+      <strong>前提：</strong>假设你正在设计一款手游的版本规划。你的团队每个月能产出 1 个新副本 + 1 个新活动 + 1 个新角色。</p>
+    </div>
+
+    <div class="step">
+      <strong>任务 A：设计一个 6 周版本的节奏日历</strong>
+      <p>每周安排什么内容？为什么这样安排？</p>
+    </div>
+
+    <div class="step">
+      <strong>任务 B：估算"临界点"</strong>
+      <p>假设核心玩家每天在线 3 小时，每个新副本的内容量大约是 30 分钟的新鲜体验。算一下——你的版本内容在第几周会被核心玩家消耗完毕？然后你用什么活动填补空窗期？</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 8: Quiz -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>🧪 知识测验</h2>
+
+  <div class="quiz">
+    <h3>问题 1</h3>
+    <p class="quiz-question">游戏内容规划的"临界点"指的是什么？</p>
+    <div class="quiz-options" data-quiz="q1">
+      <button class="quiz-btn" data-answer="wrong">新版本上线的时间点</button>
+      <button class="quiz-btn" data-answer="wrong">玩家决定付费的时间点</button>
+      <button class="quiz-btn" data-answer="correct">玩家消耗完现有内容、开始长草的时间点</button>
+      <button class="quiz-btn" data-answer="wrong">游戏运营达到盈亏平衡的时间点</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q1"></div>
+  </div>
+
+  <div class="quiz">
+    <h3>问题 2</h3>
+    <p class="quiz-question">以下哪一项不是"延长内容消耗时间"的有效手段？</p>
+    <div class="quiz-options" data-quiz="q2">
+      <button class="quiz-btn" data-answer="wrong">体力系统（每天限制次数）</button>
+      <button class="quiz-btn" data-answer="correct">增加副本的怪物血量（单纯让玩家花更多时间打）</button>
+      <button class="quiz-btn" data-answer="wrong">随机掉落（需要反复刷）</button>
+      <button class="quiz-btn" data-answer="wrong">难度分层（普通/困难/地狱）</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q2"></div>
+  </div>
+
+  <div class="quiz">
+    <h3>问题 3</h3>
+    <p class="quiz-question">Battle Pass（战斗通行证）的核心设计理念是什么？</p>
+    <div class="quiz-options" data-quiz="q3">
+      <button class="quiz-btn" data-answer="wrong">让玩家一次性获得所有奖励</button>
+      <button class="quiz-btn" data-answer="correct">把一次性付费转化为持续活跃的驱动力</button>
+      <button class="quiz-btn" data-answer="wrong">取代游戏内的所有付费点</button>
+      <button class="quiz-btn" data-answer="wrong">只服务免费玩家</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q3"></div>
+  </div>
+
+  <div class="quiz">
+    <h3>问题 4</h3>
+    <p class="quiz-question">内容消耗速度由哪两个因素决定？</p>
+    <div class="quiz-options" data-quiz="q4">
+      <button class="quiz-btn" data-answer="wrong">活跃用户数 × 留存率</button>
+      <button class="quiz-btn" data-answer="wrong">开发团队人数 × 开发时间</button>
+      <button class="quiz-btn" data-answer="correct">玩家日均游戏时长 × 效率</button>
+      <button class="quiz-btn" data-answer="wrong">付费玩家数 × 平均消费</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q4"></div>
+  </div>
+
+  <div class="quiz">
+    <h3>问题 5</h3>
+    <p class="quiz-question">原神选择 42 天一个版本的核心原因是？</p>
+    <div class="quiz-options" data-quiz="q5">
+      <button class="quiz-btn" data-answer="wrong">开发团队只有这么多产能</button>
+      <button class="quiz-btn" data-answer="correct">在内容消耗完之前，用预告和期待管理留住玩家，形成"期待期"而非"长草期"</button>
+      <button class="quiz-btn" data-answer="wrong">42 天刚好是一个月卡周期</button>
+      <button class="quiz-btn" data-answer="wrong">为了配合苹果 App Store 的审核周期</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q5"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 9: Resources -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>📚 深入学习推荐</h2>
+
+  <div class="primary-source">
+    <h3>📖 必读书籍</h3>
+
+    <div class="source-item">
+      <span class="emoji">1</span>
+      <div>
+        <strong>《游戏运营：从入门到精通》— 饭大官人</strong><br>
+        国内游戏运营最好的实战书之一，专门讲了活动规划和版本节奏。<br>
+        <span style="font-size:0.85rem; color:var(--color-muted);">作者曾是《梦幻西游》《COC》等游戏的核心运营</span>
+      </div>
+    </div>
+
+    <div class="source-item">
+      <span class="emoji">2</span>
+      <div>
+        <strong>《关于游戏设计》— 任天堂开发者访谈合集</strong><br>
+        任天堂的内容节奏理念：制造→消耗→制造→消耗的循环。心流章节尤其相关。
+      </div>
+    </div>
+
+    <div class="source-item">
+      <span class="emoji">3</span>
+      <div>
+        <strong>《游戏设计艺术》— Jesse Schell</strong><br>
+        第 7-8 章：游戏体验的节奏。内容规划的本质是控制体验节奏。
+      </div>
+    </div>
+  </div>
+
+  <div class="primary-source">
+    <h3>🎬 视频资源</h3>
+
+    <div class="source-item">
+      <span class="emoji">▶</span>
+      <div>
+        <strong>GDC Talk: "Content Drop Design in Live Service Games"</strong><br>
+        专门讲服务型游戏的内容投放节奏。搜索 "GDC Live Service Content"。
+      </div>
+    </div>
+
+    <div class="source-item">
+      <span class="emoji">▶</span>
+      <div>
+        <strong>"How Fortnite Changed Content Updates Forever"</strong><br>
+        Fortnite 的事件驱动内容模式分析。YouTube 搜索。
+      </div>
+    </div>
+
+    <div class="source-item">
+      <span class="emoji">▶</span>
+      <div>
+        <strong>《原神》版本节奏深度分析 — 哔站/知乎</strong><br>
+        搜索"原神版本节奏分析"，有很多社区深度文章。
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 10: Check Understanding -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>✅ 检验理解</h2>
+
+  <div class="check-questions">
+    <p>在继续之前，请思考以下问题：</p>
+
+    <ol>
+      <li>
+        <strong>你熟悉的游戏目前的内容节奏是健康的吗？有没有出现过"内容断档"的情况？当时玩家的反应是什么？</strong>
+      </li>
+      <li>
+        <strong>假设你的团队一个月只能做 10 天的内容量（对核心玩家而言），但核心玩家一个月在线时间是 50 小时。你会设计什么机制来让这 10 天的内容撑满 30 天？</strong>
+        <br><small style="color:var(--color-muted);">提示：体力、随机、周常、日常等等</small>
+      </li>
+      <li>
+        <strong>为什么 Battle Pass 比"买断制 DLC"更适合长线运营游戏？</strong>
+      </li>
+    </ol>
+  </div>
+
+  <!-- ═══ Footer ═══ -->
+  <div class="lesson-footer">
+    <p>Module 4 结束 · 内容规划能力</p>
+    <p>📖 下一课：Module 5 — 决策能力</p>
+    <p style="font-size:0.8rem; margin-top:0.5rem;">
+      有问题？回到 Agent 对话中提问！
+    </p>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll('.quiz-options').forEach(function(container) {
+  var quizId = container.dataset.quiz;
+  var feedback = document.getElementById('feedback-' + quizId);
+  var answered = false;
+
+  container.querySelectorAll('.quiz-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      if (answered) return;
+      answered = true;
+      var isCorrect = btn.dataset.answer === 'correct';
+      container.querySelectorAll('.quiz-btn').forEach(function(b) {
+        b.disabled = true;
+        if (b === btn) {
+          b.classList.add(isCorrect ? 'correct' : 'incorrect');
+          if (!isCorrect) {
+            container.querySelectorAll('.quiz-btn').forEach(function(cb) {
+              if (cb.dataset.answer === 'correct') cb.classList.add('correct');
+            });
+          }
+        }
+      });
+      feedback.className = 'quiz-feedback show ' + (isCorrect ? 'correct' : 'incorrect');
+      feedback.textContent = isCorrect ? '✅ 答对了！' : '❌ 再想想。';
+    });
+  });
+});
+</script>
+
+</body>
+</html>
