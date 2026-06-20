@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 3: 游戏经济设计 — 战略型游戏策划</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="lesson-meta">Module 3 · 游戏经济设计 · 预计阅读 35 分钟</div>
+  <h1>💰 游戏经济设计：游戏的生命线</h1>
+  <p style="font-size:1.1rem; color: var(--color-muted); margin-bottom: 2em;">
+    不懂经济的策划，不敢做数值型游戏。经济崩了，游戏就死了。
+  </p>
+
+  <!-- ═══ Progress ═══ -->
+  <div class="progress-section">
+    <div style="display:flex; justify-content:space-between; font-family:var(--font-heading); font-size:0.8rem; margin-bottom:0.3rem;">
+      <span>学习进度</span>
+      <span>8 个模块 · 当前: 3/8</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" style="width:37.5%"></div>
+    </div>
+    <div class="progress-labels">
+      <span>系统思维</span>
+      <span>玩家心理学</span>
+      <span style="font-weight:700; color:var(--color-accent);">经济设计 ◀</span>
+      <span>内容规划</span>
+      <span>决策能力</span>
+      <span>商业化</span>
+      <span>长线运营</span>
+      <span>产品分析</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 1: WHY -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>🎯 为什么策划必须懂经济设计？</h2>
+
+  <blockquote>
+    <p>"MMORPG 的本质是一个可以用剑杀人的聊天室，裹着一层经济系统。"</p>
+    <small>— Raph Koster, <em>《游戏设计之道》作者</em></small>
+  </blockquote>
+
+  <p>想想你平时玩的手游——能量、金币、钻石、体力、抽卡券、强化石、碎片……<strong>每一样都是经济设计</strong>。</p>
+
+  <div class="case-study">
+    <p>某 MMO 开服半年后，金币价格崩盘。原因是：</p>
+    <ul>
+      <li>每日任务产出 10000 金币</li>
+      <li>但每天的消耗只有 3000 金币（修装备+传送费）</li>
+      <li>多余的金币无处可去</li>
+      <li>半年后 10000 金币只能买一个面包</li>
+      <li>新玩家："我打个怪掉的金币连修装备都不够？" → 流失</li>
+      <li><strong>游戏死亡。</strong></li>
+    </ul>
+  </div>
+
+  <div class="insight">
+    <strong>核心洞察</strong>
+    经济系统是游戏的"血液系统"。如果血液不流动或通货膨胀，游戏就会"心脏病发作"。<strong>好的经济设计 = 可持续的资源循环 = 长寿的游戏。</strong>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 2: Fundamentals -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>1️⃣ 经济的三要素</h2>
+
+  <p>所有游戏经济系统都由三个基本要素构成：</p>
+
+  <div style="display:flex; gap:1rem; flex-wrap:wrap; margin:1.5rem 0;">
+    <div class="concept-card" style="flex:1; min-width:200px;">
+      <h3>🏭 Source（产出）</h3>
+      <p>资源从哪里来。</p>
+      <ul>
+        <li>副本掉落</li>
+        <li>任务奖励</li>
+        <li>每日产出</li>
+        <li>付费购买</li>
+        <li>玩家交易</li>
+      </ul>
+    </div>
+    <div class="concept-card" style="flex:1; min-width:200px;">
+      <h3>🪣 Sink（消耗）</h3>
+      <p>资源从哪里消失。</p>
+      <ul>
+        <li>强化/升级</li>
+        <li>合成/锻造</li>
+        <li>修理/维护</li>
+        <li>手续费/税收</li>
+        <li>装饰/外观</li>
+      </ul>
+    </div>
+    <div class="concept-card" style="flex:1; min-width:200px;">
+      <h3>🔄 流通（流通）</h3>
+      <p>资源如何在玩家之间流动。</p>
+      <ul>
+        <li>交易行</li>
+        <li>赠送/邮寄</li>
+        <li>掉落/拾取</li>
+        <li>公会共享</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="system-diagram" style="flex-direction:column; gap:0.5rem;">
+    <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; justify-content:center;">
+      <span class="node positive">🏭 产出 (Source)</span>
+      <span class="arrow positive">→</span>
+      <span class="node neutral">🔄 流通 (流通)</span>
+      <span class="arrow positive">→</span>
+      <span class="node negative">🪣 消耗 (Sink)</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:0.5rem; margin-top:0.3rem;">
+      <span class="arrow" style="font-size:1rem;">如果 Source > Sink → 💸 通胀</span>
+      <span class="arrow" style="font-size:1rem;">如果 Source < Sink → 🥶 通缩</span>
+      <span class="arrow" style="font-size:1rem; color:var(--color-good);">如果 Source ≈ Sink → ✅ 健康</span>
+    </div>
+  </div>
+
+  <div class="insight">
+    <strong>牢记这条核心公式</strong>
+    每个策划都应该在脑子里刻着这条公式：<strong style="font-size:1.1rem;">Source − Sink = 经济健康度</strong>。
+    长期 Source − Sink > 0，必定通胀。
+    长期 Source − Sink < 0，必定通缩（玩家越来越穷，不想玩）。
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 3: Resource Pyramid -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>2️⃣ 资源类型金字塔</h2>
+
+  <p>大多数游戏的资源分 4 层，每一层的设计目的不同：</p>
+
+  <div style="margin:1.5rem auto; max-width:500px;">
+    <!-- Layer 1 -->
+    <div style="padding:1rem; margin:0.3rem 0; border-radius:8px; background:linear-gradient(135deg, #fef3c7, #fde68a); border:2px solid #f59e0b; text-align:center;">
+      <strong style="font-size:1.1rem; color:#92400e;">🥇 硬通货（Hard Currency）</strong>
+      <p style="font-size:0.85rem; margin:0.3rem 0 0; color:#78350f;">
+        充值货币 · 钻石/点券 · 来源唯一：付费<br>
+        <em>"这是游戏收入的直接来源，必须严格控制产出"</em>
+      </p>
+    </div>
+    <!-- Layer 2 -->
+    <div style="padding:1rem; margin:0.3rem 0; border-radius:8px; background:linear-gradient(135deg, #f0fdf4, #bbf7d0); border:2px solid #22c55e; text-align:center;">
+      <strong style="font-size:1.1rem; color:#166534;">🥈 软通货（Soft Currency）</strong>
+      <p style="font-size:0.85rem; margin:0.3rem 0 0; color:#14532d;">
+        金币/铜钱 · 主要流通货币 · 日常产出<br>
+        <em>"连接玩家所有行为的通用资源"</em>
+      </p>
+    </div>
+    <!-- Layer 3 -->
+    <div style="padding:1rem; margin:0.3rem 0; border-radius:8px; background:linear-gradient(135deg, #dbeafe, #93c5fd); border:2px solid #3b82f6; text-align:center;">
+      <strong style="font-size:1.1rem; color:#1e40af;">🏅 代币（Token）</strong>
+      <p style="font-size:0.85rem; margin:0.3rem 0 0; color:#1e3a8a;">
+        公会币 · 竞技场币 · 活动代币 · 专项消耗<br>
+        <em>"隔离经济，防止通兑——限制资源跨系统流动"</em>
+      </p>
+    </div>
+    <!-- Layer 4 -->
+    <div style="padding:1rem; margin:0.3rem 0; border-radius:8px; background:linear-gradient(135deg, #f3f4f6, #d1d5db); border:2px solid #6b7280; text-align:center;">
+      <strong style="font-size:1.1rem; color:#374151;">🪨 材料（Materials）</strong>
+      <p style="font-size:0.85rem; margin:0.3rem 0 0; color:#1f2937;">
+        强化石 · 碎片 · 突破材料 · 特定用途<br>
+        <em>"控制成长节奏，限制交易范围"</em>
+      </p>
+    </div>
+  </div>
+
+  <p><strong>🔑 关键设计原则：每层不互通</strong></p>
+
+  <p>好的经济设计，不同层的资源<strong>不能自由兑换</strong>：</p>
+
+  <div class="compare-grid">
+    <div class="side bad">
+      <h4>❌ 坏设计（通兑）</h4>
+      <p>金币 ↔ 钻石 ↔ 材料</p>
+      <p>玩家发现直接用钻石买金币最划算 → 没人做日常 → 日常系统废了 → 内容消耗 <- 恶性循环</p>
+    </div>
+    <div class="side good">
+      <h4>✅ 好设计（隔离）</h4>
+      <p>金币 = 日常产出<br>钻石 = 付费获取<br>材料 = 副本掉落</p>
+      <p>每个系统有独立的产出闭环 → 玩家有理由参与所有系统</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 4: Inflation -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>3️⃣ 通货膨胀：游戏经济的头号杀手</h2>
+
+  <p>通胀不是"钱变多了"——是<strong>单位货币的购买力下降了</strong>。</p>
+
+  <div class="case-study">
+    <h3 style="margin-top:0;">📋 《魔兽世界》经济演变 (2004-2024)</h3>
+    <table>
+      <thead><tr><th>版本</th><th>金币价值</th><th>原因</th></tr></thead>
+      <tbody>
+        <tr><td>TBC (2007)</td><td>1 金 ≈ 1 RMB</td><td>产出有限，Sink 充足</td></tr>
+        <tr><td>WLK (2009)</td><td>1 金 ≈ 0.3 RMB</td><td>副本产出增加</td></tr>
+        <tr><td>MoP (2012)</td><td>1 金 ≈ 0.05 RMB</td><td>场景战役大量产金</td></tr>
+        <tr><td>Legion (2016)</td><td>1 金 ≈ 0.003 RMB</td><td>任务奖励膨胀 + 新 Sink 跟不上</td></tr>
+        <tr><td>Shadowlands (2020)</td><td>1 金 ≈ 0.0005 RMB</td><td>全面通胀</td></tr>
+      </tbody>
+    </table>
+    <p><strong>教训：</strong>每个版本都在增加 Source（新地图任务奖励、新副本掉落），但是 Sink 的增长没有跟上（修理费、传送费的涨幅远小于产出涨幅）。这是几乎所有 MMO 都遭遇的通胀死循环。</p>
+  </div>
+
+  <h3>通胀的危害链</h3>
+
+  <div class="system-diagram" style="flex-direction:column;">
+    <div class="node neutral">新玩家获得的金币买不起拍卖行的装备</div>
+    <span class="arrow">↓</span>
+    <div class="node neutral">新玩家感到追赶无望</div>
+    <span class="arrow">↓</span>
+    <div class="node negative">新玩家流失</div>
+    <span class="arrow">↓</span>
+    <div class="node neutral">新血不足 → 老玩家匹配不到队友</div>
+    <span class="arrow">↓</span>
+    <div class="node negative">老玩家也流失 → 服务器死亡</div>
+  </div>
+
+  <div class="insight">
+    <strong>反直觉的事实</strong>
+    游戏通胀的最大受害者不是玩家——是<strong>新玩家</strong>。老玩家早已积累了大量财富，通胀对他们影响不大。但新玩家一进来看见物价飞涨，直接弃坑。<strong>通胀杀死的是游戏的新陈代谢能力</strong>。
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 5: Sink Design -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>4️⃣ Sink 的艺术：如何让资源"快乐地消失"</h2>
+
+  <p>Sink 是游戏经济设计师最重要的工具。一个好的 Sink 是<strong>玩家愿意花钱、而且花了还开心</strong>的消耗途径。</p>
+
+  <table>
+    <thead><tr><th>Sink 类型</th><th>例子</th><th>玩家感受</th></tr></thead>
+    <tbody>
+      <tr><td><strong>成长消耗</strong></td><td>强化装备、升级技能</td><td>😊 "我变强了"</td></tr>
+      <tr><td><strong>装饰消耗</strong></td><td>时装、坐骑、家园</td><td>😊 "我好帅"</td></tr>
+      <tr><td><strong>社交消耗</strong></td><td>公会捐献、婚礼、送礼</td><td>😊 "我和朋友一起"</td></tr>
+      <tr><td><strong>维护消耗</strong></td><td>修理装备、传送费</td><td>😐 "应该的"</td></tr>
+      <tr><td><strong>手续费</strong></td><td>交易税、上架费</td><td>😑 "可以接受"</td></tr>
+      <tr><td><strong>错误成本</strong></td><td>洗点、重置天赋</td><td>😤 "好贵……但不得不花"</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Sink 设计的三个原则：</strong></p>
+  <ol>
+    <li><strong>足够多</strong>——不能只有一个 Sink。经济崩溃往往是因为只有一个 Sink 被堵住了</li>
+    <li><strong>有层次</strong>——有些 Sink 面向所有人（修理费），有些面向核心玩家（极限强化），有些面向土豪（外观）</li>
+    <li><strong>伴随成长</strong>——最好的 Sink 是玩家"主动想花"而不是"被迫花"的</li>
+  </ol>
+
+  <blockquote class="good">
+    <strong>💡 经典案例：</strong>《COC 部落冲突》中，9 本 → 10 本升级费用比之前翻 3 倍。这是故意的——因为玩家到了 9 本，金币已经囤积了很多，需要一个大 Sink 来"抽干"他的库存。每次大版本更新，新的建筑等级就是一块巨大的 Sink。
+  </blockquote>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 6: Design Patterns -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>5️⃣ 三种经典经济设计模式</h2>
+
+  <div class="concept-card">
+    <h3>🏗️ 模式 1：COC 模式 — Sink 绑定成长</h3>
+    <div class="system-diagram" style="flex-direction:column;">
+      <div style="display:flex; gap:0.3rem; flex-wrap:wrap; justify-content:center;">
+        <span class="node positive">打金</span>
+        <span class="arrow">→</span>
+        <span class="node neutral">升级建筑（消耗金币）</span>
+        <span class="arrow">→</span>
+        <span class="node positive">打更多金</span>
+      </div>
+      <div style="margin-top:0.5rem;" class="node negative">资源仓库有上限 → 不打就浪费 → 被迫上线驱动</div>
+    </div>
+    <p><strong>特点：</strong>每个成长节点就是一次 Sink。仓库上限是"强制循环"的设计工具。</p>
+  </div>
+
+  <div class="concept-card">
+    <h3>🧩 模式 2：原神模式 — 资源分层隔离</h3>
+    <table>
+      <thead><tr><th>资源</th><th>用途</th><th>可否通兑</th></tr></thead>
+      <tbody>
+        <tr><td>原石（付费）</td><td>抽卡</td><td>→ 可换体力，但不能换经验书</td></tr>
+        <tr><td>摩拉（通用）</td><td>强化、锻造、升级</td><td>→ 几乎所有系统都需要</td></tr>
+        <tr><td>树脂（体力）</td><td>副本准入</td><td>→ 不可交易，天然上限</td></tr>
+        <tr><td>经验书</td><td>角色升级</td><td>→ 只能刷本获得</td></tr>
+        <tr><td>天赋书</td><td>技能升级</td><td>→ 特定日子开放（进一步限制）</td></tr>
+      </tbody>
+    </table>
+    <p><strong>特点：</strong>通过"资源隔离 + 体力限制"精确控制玩家的成长节奏。每种资源都有自己的 Source 和 Sink，互不干扰。</p>
+  </div>
+
+  <div class="concept-card">
+    <h3>🤝 模式 3：MMO 模式 — 社交驱动流通</h3>
+    <div class="system-diagram" style="flex-direction:column;">
+      <div>玩家 A 采药 → 挂拍卖行 → 玩家 B 购买 → 制作药水 → 卖回给 A</div>
+      <div class="label" style="margin-top:0.5rem;">经济 = 社交的"骨架"</div>
+    </div>
+    <p><strong>特点：</strong>玩家之间的交易本身创造"经济活力"。拍卖行/交易行是经济的"心脏"。</p>
+    <blockquote class="warn">
+      <strong>⚠️ 风险：</strong>当玩家发现"自给自足比交易更划算"，交易经济就死了。这就是为什么很多 MMO 限制玩家自产自用（如装备绑定、采集需要专业技能）。
+    </blockquote>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 7: Case Study -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>6️⃣ 深度案例分析</h2>
+
+  <div class="case-study">
+    <h3 style="margin-top:0;">📋 《COC》10 年经济的秘密</h3>
+    <p><strong>经济结构：</strong></p>
+    <ul>
+      <li><strong>金币</strong>：建造/升级建筑（主要 Sink）</li>
+      <li><strong>圣水</strong>：造兵/研究科技（另一个独立 Sink）</li>
+      <li><strong>暗黑重油</strong>：英雄/高级兵种（第三个 Sink）</li>
+    </ul>
+    <p><strong>聪明的设计点：</strong></p>
+    <ol>
+      <li><strong>多 Sink 并行</strong>——金币、圣水、黑油各自有独立的消耗途径，不会相互通兑</li>
+      <li><strong>仓库上限 = 强迫消耗</strong>——满了不打就被抢，所以你要么消耗掉，要么上线打（这就是留存）</li>
+      <li><strong>进攻收益阶梯</strong>——低本打高本资源奖励高 → 鼓励越级挑战 → 保持挑战感</li>
+      <li><strong>9 年后依然健康的秘密</strong>——每次大版本更新引入新的建筑等级（新 Sink），抽干老玩家的存量资源</li>
+    </ol>
+    <blockquote class="good">
+      <strong>💡 行业金句：</strong>COC 的设计师曾说——"我们的经济系统不是为了让玩家变富，而是为了让玩家永远觉得'还差一点'。"这种永远差一点的状态，就是游玩的驱动力。
+    </blockquote>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 8: Practice -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>🛠️ 实践练习</h2>
+
+  <div class="exercise">
+    <h3>✏️ 练习：分析一款游戏的经济系统</h3>
+    <p>选一款游戏（推荐你的项目、《原神》或《COC》），完成以下任务：</p>
+
+    <div class="step">
+      <strong>步骤 1：列出所有资源</strong>
+      <p>按 4 层金字塔分类列出游戏中的所有货币和材料。</p>
+    </div>
+
+    <div class="step">
+      <strong>步骤 2：找到 Source 和 Sink</strong>
+      <p>对每一种主要资源，说清楚它从哪里来（Source）和到哪里去（Sink）。</p>
+    </div>
+
+    <div class="step">
+      <strong>步骤 3：判断经济健康度</strong>
+      <p>Source 和 Sink 哪边更大？有通胀/通缩的迹象吗？你怎么判断的？</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 9: Quiz -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>🧪 知识测验</h2>
+
+  <div class="quiz">
+    <h3>问题 1</h3>
+    <p class="quiz-question">如果游戏中金币的 Source 长期 > Sink，会有什么后果？</p>
+    <div class="quiz-options" data-quiz="q1">
+      <button class="quiz-btn" data-answer="wrong">玩家越来越穷，玩不下去</button>
+      <button class="quiz-btn" data-answer="wrong">游戏平衡性变好</button>
+      <button class="quiz-btn" data-answer="correct">通货膨胀，金币购买力下降</button>
+      <button class="quiz-btn" data-answer="wrong">玩家之间的差距缩小</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q1"></div>
+  </div>
+
+  <div class="quiz">
+    <h3>问题 2</h3>
+    <p class="quiz-question">以下哪一项是最好的 Sink 设计？</p>
+    <div class="quiz-options" data-quiz="q2">
+      <button class="quiz-btn" data-answer="wrong">一个非常贵的修理费（玩家不得不花）</button>
+      <button class="quiz-btn" data-answer="correct">强化装备 + 外观装扮 + 交易税（多层次、主动+被动）</button>
+      <button class="quiz-btn" data-answer="wrong">只有交易行手续费一个消耗途径</button>
+      <button class="quiz-btn" data-answer="wrong">不设计任何 Sink，让玩家自由囤积</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q2"></div>
+  </div>
+
+  <div class="quiz">
+    <h3>问题 3</h3>
+    <p class="quiz-question">游戏设计"代币"（如公会币、竞技场币）的主要目的是什么？</p>
+    <div class="quiz-options" data-quiz="q3">
+      <button class="quiz-btn" data-answer="wrong">增加资源种类让玩家更困惑</button>
+      <button class="quiz-btn" data-answer="wrong">让氪金玩家可以快速变强</button>
+      <button class="quiz-btn" data-answer="correct">隔离经济，防止系统性通兑带来的通胀</button>
+      <button class="quiz-btn" data-answer="wrong">给美术团队更多设计工作</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q3"></div>
+  </div>
+
+  <div class="quiz">
+    <h3>问题 4</h3>
+    <p class="quiz-question">COC 使用"资源仓库有上限"的设计，其核心目的是什么？</p>
+    <div class="quiz-options" data-quiz="q4">
+      <button class="quiz-btn" data-answer="wrong">防止玩家囤积过多资源导致服务器压力</button>
+      <button class="quiz-btn" data-answer="correct">强迫玩家消耗或上线，维持核心循环</button>
+      <button class="quiz-btn" data-answer="wrong">让免费玩家追不上付费玩家</button>
+      <button class="quiz-btn" data-answer="wrong">增加游戏难度</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q4"></div>
+  </div>
+
+  <div class="quiz">
+    <h3>问题 5</h3>
+    <p class="quiz-question">经济通胀最大的受害者通常是哪类玩家？</p>
+    <div class="quiz-options" data-quiz="q5">
+      <button class="quiz-btn" data-answer="wrong">重氪玩家（他们花钱最多）</button>
+      <button class="quiz-btn" data-answer="wrong">休闲玩家（他们玩的时间最少）</button>
+      <button class="quiz-btn" data-answer="correct">新玩家（追赶成本越来越高）</button>
+      <button class="quiz-btn" data-answer="wrong">公会会长（管理压力增大）</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q5"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 10: Resources -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>📚 深入学习推荐</h2>
+
+  <div class="primary-source">
+    <h3>📖 必读书籍</h3>
+
+    <div class="source-item">
+      <span class="emoji">1</span>
+      <div>
+        <strong>《游戏设计艺术》 (The Art of Game Design) — Jesse Schell</strong><br>
+        第 19 章专门讲经济系统，有经济设计的"透镜"。
+      </div>
+    </div>
+
+    <div class="source-item">
+      <span class="emoji">2</span>
+      <div>
+        <strong>《虚拟经济学》 (Virtual Economies) — Vili Lehdonvirta & Edward Castronova</strong><br>
+        最系统的游戏经济学术著作。从货币理论到虚拟财产法。较学术但非常权威。
+      </div>
+    </div>
+
+    <div class="source-item">
+      <span class="emoji">3</span>
+      <div>
+        <strong>《游戏数值设计》 — 张毅 (国内作者)</strong><br>
+        中文游戏策划必读，专讲数值和经济系统设计。非常实践导向。
+      </div>
+    </div>
+  </div>
+
+  <div class="primary-source">
+    <h3>🎬 视频与案例研究</h3>
+
+    <div class="source-item">
+      <span class="emoji">▶</span>
+      <div>
+        <strong>GDC Talk: "Economy Design in Clash of Clans"</strong><br>
+        COC 主策讲经济设计。YouTube 上有完整版。
+      </div>
+    </div>
+
+    <div class="source-item">
+      <span class="emoji">▶</span>
+      <div>
+        <strong>"EVE Online 经济" — 世界上第一个由经济学博士参与设计的游戏经济</strong><br>
+        冰岛 CCP 公司请了真正的经济学家来设计 EVE 的经济系统。搜索 "EVE Online economy economist"。
+      </div>
+    </div>
+
+    <div class="source-item">
+      <span class="emoji">▶</span>
+      <div>
+        <strong>《魔兽世界》怀旧服 vs 正式服经济对比</strong><br>
+        对比分析：为什么怀旧服的金币更值钱？有哪些 Source/Sink 设计差异？
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 11: Check Understanding -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>✅ 检验理解</h2>
+
+  <div class="check-questions">
+    <p>在继续之前，请思考以下问题：</p>
+
+    <ol>
+      <li>
+        <strong>以你正在做或最熟悉的游戏为例，它的主要通货（金币/钻石/等）的 Source 和 Sink 分别是什么？你觉得目前经济是健康的还是通胀/通缩？为什么？</strong>
+      </li>
+      <li>
+        <strong>如果你要设计一个新的 Sink 来消耗游戏中过剩的金币，你会设计什么？（提示：考虑玩家的感受——他花了钱还得觉得值）</strong>
+      </li>
+      <li>
+        <strong>什么是代币？为什么要设计代币而不是直接用金币统一所有消费？</strong>
+      </li>
+    </ol>
+  </div>
+
+  <!-- ═══ Footer ═══ -->
+  <div class="lesson-footer">
+    <p>Module 3 结束 · 游戏经济设计</p>
+    <p>📖 下一课：Module 4 — 内容规划能力</p>
+    <p style="font-size:0.8rem; margin-top:0.5rem;">
+      有问题？回到 Agent 对话中提问！
+    </p>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll('.quiz-options').forEach(function(container) {
+  var quizId = container.dataset.quiz;
+  var feedback = document.getElementById('feedback-' + quizId);
+  var answered = false;
+
+  container.querySelectorAll('.quiz-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      if (answered) return;
+      answered = true;
+      var isCorrect = btn.dataset.answer === 'correct';
+      container.querySelectorAll('.quiz-btn').forEach(function(b) {
+        b.disabled = true;
+        if (b === btn) {
+          b.classList.add(isCorrect ? 'correct' : 'incorrect');
+          if (!isCorrect) {
+            container.querySelectorAll('.quiz-btn').forEach(function(cb) {
+              if (cb.dataset.answer === 'correct') cb.classList.add('correct');
+            });
+          }
+        }
+      });
+      feedback.className = 'quiz-feedback show ' + (isCorrect ? 'correct' : 'incorrect');
+      feedback.textContent = isCorrect ? '✅ 答对了！' : '❌ 再想想。';
+    });
+  });
+});
+</script>
+
+</body>
+</html>

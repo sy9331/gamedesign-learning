@@ -12,7 +12,10 @@
       "Bash(git add *)",
       "Bash(git commit -m 'Initial commit: 战略型游戏策划学习路线 *)",
       "Bash(git push *)",
-      "Bash(git -c user.name=sy9331 -c user.email=932632886@qq.com commit -m 'Module 2: 玩家心理学 *)"
+      "Bash(git -c user.name=sy9331 -c user.email=932632886@qq.com commit -m 'Module 2: 玩家心理学 *)",
+      "Bash(git -c http.sslVerify=false push)",
+      "Bash(git -c http.version=HTTP/1.1 -c http.postBuffer=524288000 push --verbose)",
+      "Bash(git -c user.name=sy9331 -c user.email=932632886@qq.com commit -m 'Module 3: 游戏经济设计 *)"
     ]
   }
 }
