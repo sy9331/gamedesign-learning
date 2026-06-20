@@ -19,7 +19,7 @@ AI正在接管执行层工作（数值计算、文档、竞品分析、部分系
 
 ## Completed Modules
 - [x] Module 1: 系统思维 (2026-06-20)
-- [ ] Module 2: 玩家心理学
+- [x] Module 2: 玩家心理学 (2026-06-20)
 - [ ] Module 3: 游戏经济设计
 - [ ] Module 4: 内容规划能力
 - [ ] Module 5: 决策能力

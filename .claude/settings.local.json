@@ -10,7 +10,9 @@
       "Bash(curl *)",
       "Bash(git remote *)",
       "Bash(git add *)",
-      "Bash(git commit -m 'Initial commit: 战略型游戏策划学习路线 *)"
+      "Bash(git commit -m 'Initial commit: 战略型游戏策划学习路线 *)",
+      "Bash(git push *)",
+      "Bash(git -c user.name=sy9331 -c user.email=932632886@qq.com commit -m 'Module 2: 玩家心理学 *)"
     ]
   }
 }

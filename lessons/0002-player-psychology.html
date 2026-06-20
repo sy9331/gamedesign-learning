@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 2: 玩家心理学 — 战略型游戏策划</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="lesson-meta">Module 2 · 玩家心理学 · 预计阅读 30 分钟</div>
+  <h1>🧠 玩家心理学：理解你的用户</h1>
+  <p style="font-size:1.1rem; color: var(--color-muted); margin-bottom: 2em;">
+    系统是骨架，心理学是血肉。一个好的策划必须理解"人"。
+  </p>
+
+  <!-- ═══ Progress ═══ -->
+  <div class="progress-section">
+    <div style="display:flex; justify-content:space-between; font-family:var(--font-heading); font-size:0.8rem; margin-bottom:0.3rem;">
+      <span>学习进度</span>
+      <span>8 个模块 · 当前: 2/8</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" style="width:25%"></div>
+    </div>
+    <div class="progress-labels">
+      <span>系统思维</span>
+      <span style="font-weight:700; color:var(--color-accent);">玩家心理学 ◀</span>
+      <span>经济设计</span>
+      <span>内容规划</span>
+      <span>决策能力</span>
+      <span>商业化</span>
+      <span>长线运营</span>
+      <span>产品分析</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 1: WHY -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>🎯 为什么策划必须懂心理学？</h2>
+
+  <p>一个真实的行业故事：</p>
+
+  <div class="case-study">
+    <p>某社交游戏公司发现玩家在"邀请好友"功能上的转化率很低。团队讨论了两周——加奖励、改 UI、做推送，效果都不明显。</p>
+    <p>最终一个懂心理学的策划说：<em>"我们把按钮从'邀请好友'改成'邀请好友帮你过关'试试。"</em></p>
+    <p><strong>转化率提升了 340%。</strong></p>
+    <p>功能没变，代码没变，只是<em>玩家对自己的行为有了不同的解释</em>——我不是在打扰朋友，<strong>我是在请求帮助</strong>。</p>
+  </div>
+
+  <div class="insight">
+    <strong>核心洞察</strong>
+    玩家不是理性的经济人。他们做决策的依据是<em>感受</em>，而非逻辑。理解玩家的情感和行为模式，是策划和 AI 之间最根本的差距——AI 可以算数据，但<strong>它不理解人的心</strong>。
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 2: Why People Play -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>1️⃣ 玩家为什么玩游戏？— 动机理论</h2>
+
+  <p>所有心理学设计的起点：理解<strong>不同类型的人为何玩游戏</strong>。这里有三个相互补充的经典模型。</p>
+
+  <!-- Model 1: Bartle -->
+  <div class="concept-card">
+    <h3>🎮 模型一：Bartle's Taxonomy (1996)</h3>
+    <p>Richard Bartle 将 MUD 玩家分为四种原形——这是游戏心理学最经典的模型：</p>
+
+    <div style="display:flex; flex-wrap:wrap; gap:0.8rem; margin:1rem 0;">
+      <div style="flex:1; min-width:180px; padding:1rem; border-radius:8px; background:#fef3c7; border:1px solid #fde68a;">
+        <div style="font-size:1.5rem; text-align:center;">🏆</div>
+        <h4 style="margin:0.3rem 0; text-align:center; color:#92400e;">成就者</h4>
+        <p style="font-size:0.85rem; margin:0;">追求等级、装备、排名、成就<br>→ <em>"我要变强"</em></p>
+      </div>
+      <div style="flex:1; min-width:180px; padding:1rem; border-radius:8px; background:#dbeafe; border:1px solid #bfdbfe;">
+        <div style="font-size:1.5rem; text-align:center;">🗺️</div>
+        <h4 style="margin:0.3rem 0; text-align:center; color:#1e40af;">探索者</h4>
+        <p style="font-size:0.85rem; margin:0;">追求发现新内容、彩蛋、机制<br>→ <em>"看看那边有什么"</em></p>
+      </div>
+      <div style="flex:1; min-width:180px; padding:1rem; border-radius:8px; background:#fce7f3; border:1px solid #fbcfe8;">
+        <div style="font-size:1.5rem; text-align:center;">🤝</div>
+        <h4 style="margin:0.3rem 0; text-align:center; color:#9d174d;">社交者</h4>
+        <p style="font-size:0.85rem; margin:0;">追求与其他玩家互动、公会<br>→ <em>"和朋友一起"</em></p>
+      </div>
+      <div style="flex:1; min-width:180px; padding:1rem; border-radius:8px; background:#fef2f2; border:1px solid #fecaca;">
+        <div style="font-size:1.5rem; text-align:center;">⚔️</div>
+        <h4 style="margin:0.3rem 0; text-align:center; color:#991b1b;">杀手</h4>
+        <p style="font-size:0.85rem; margin:0;">追求竞争、PVP、打败别人<br>→ <em>"我比你强"</em></p>
+      </div>
+    </div>
+
+    <p><strong>为什么有用？</strong> 同一个系统对不同类型玩家的吸引力完全不同：</p>
+    <table>
+      <thead><tr><th>系统</th><th>成就者</th><th>探索者</th><th>社交者</th><th>杀手</th></tr></thead>
+      <tbody>
+        <tr><td>天梯/排位</td><td>✅ 最爱</td><td>❌ 无感</td><td>⚡ 看队友</td><td>✅ 最爱</td></tr>
+        <tr><td>世界探索</td><td>❌ 浪费时间</td><td>✅ 最爱</td><td>⚡ 一起探索</td><td>❌ 无聊</td></tr>
+        <tr><td>公会/家园</td><td>⚡ 为了收益</td><td>⚡ 好奇</td><td>✅ 最爱</td><td>❌ 不关心</td></tr>
+        <tr><td>PVP 竞技</td><td>✅ 展示实力</td><td>❌ 不想打</td><td>❌ 压力大</td><td>✅ 最爱</td></tr>
+      </tbody>
+    </table>
+
+    <blockquote class="warn">
+      <strong>⚠️ 常见错误：</strong>策划往往只按自己的喜好设计游戏。如果你是社交者，你可能会低估探索者对"隐藏内容"的需求。<strong>好的策划为多种类型玩家服务。</strong>
+    </blockquote>
+  </div>
+
+  <!-- Model 2: SDT -->
+  <div class="concept-card">
+    <h3>🧠 模型二：自我决定论 (SDT)</h3>
+    <p>心理学界最受验证的动机理论。人类有三种基本心理需求：</p>
+
+    <div class="system-diagram" style="flex-direction:column; gap:1rem;">
+      <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
+        <div style="flex:1; min-width:150px; text-align:center; padding:0.8rem; background:#f0fdf4; border-radius:8px; border:1px solid #bbf7d0;">
+          <div style="font-size:1.5rem;">🎮</div>
+          <strong>自主性</strong>
+          <div style="font-size:0.8rem; color:var(--color-muted);">"我能自己选择怎么玩"</div>
+        </div>
+        <div style="flex:1; min-width:150px; text-align:center; padding:0.8rem; background:#dbeafe; border-radius:8px; border:1px solid #bfdbfe;">
+          <div style="font-size:1.5rem;">📈</div>
+          <strong>胜任感</strong>
+          <div style="font-size:0.8rem; color:var(--color-muted);">"我越玩越擅长"</div>
+        </div>
+        <div style="flex:1; min-width:150px; text-align:center; padding:0.8rem; background:#fce7f3; border-radius:8px; border:1px solid #fbcfe8;">
+          <div style="font-size:1.5rem;">❤️</div>
+          <strong>归属感</strong>
+          <div style="font-size:0.8rem; color:var(--color-muted);">"我属于这个社区"</div>
+        </div>
+      </div>
+    </div>
+
+    <p><strong>设计应用：</strong></p>
+    <ul>
+      <li><strong>自主性不足</strong> → 强制任务、自动寻路、线性关卡 → <em>"感觉被牵着走"</em></li>
+      <li><strong>胜任感不足</strong> → 太难/太简单 → <em>"我太菜了" / "好无聊"</em></li>
+      <li><strong>归属感不足</strong> → 单机体验、无法交流 → <em>"没人和我一起"</em></li>
+    </ul>
+
+    <blockquote class="good">
+      <p><strong>💡 实战技巧：</strong>当一个功能的留存数据低于预期时，用 SDT 框架问自己——这个功能满足了自主性、胜任感、归属感中的哪一个？如果三个都不满足，玩家凭什么回来？</p>
+    </blockquote>
+  </div>
+
+  <!-- Model 3: Quantic Foundry -->
+  <div class="concept-card">
+    <h3>📊 模型三：Quantic Foundry 动机模型 (2015)</h3>
+    <p>基于大数据的 12 维度玩家动机模型：</p>
+
+    <table>
+      <thead><tr><th>大类</th><th>具体动机</th><th>对应 Bartle</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="3"><strong>行动</strong></td><td>毁灭 (Destruction) — 打打打！</td><td>杀手</td></tr>
+        <tr><td>兴奋 (Excitement) — 快节奏、刺激</td><td>杀手</td></tr>
+        <tr><td>挑战 (Challenge) — 策略思考</td><td>成就者</td></tr>
+        <tr><td rowspan="3"><strong>社交</strong></td><td>竞争 (Competition) — 跟别人比</td><td>杀手</td></tr>
+        <tr><td>合作 (Cooperation) — 跟别人一起</td><td>社交者</td></tr>
+        <tr><td>社区 (Community) — 长期社交关系</td><td>社交者</td></tr>
+        <tr><td rowspan="3"><strong>沉浸</strong></td><td>叙事 (Narrative) — 好故事</td><td>探索者</td></tr>
+        <tr><td>探索 (Discovery) — 发现新东西</td><td>探索者</td></tr>
+        <tr><td>自定义 (Customization) — 表达自我</td><td>社交者</td></tr>
+        <tr><td rowspan="3"><strong>成就</strong></td><td>完成 (Completion) — 全收集</td><td>成就者</td></tr>
+        <tr><td>力量 (Power) — 变强</td><td>成就者</td></tr>
+        <tr><td>策略 (Strategy) — 深度决策</td><td>成就者</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>为什么用 Quantic Foundry 而不是 Bartle？</strong> Bartle 只有 4 类太粗了。Quantic Foundry 有 12 个维度，可以精确画出一个游戏的"玩家画像"。</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 3: Cognitive Biases -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>2️⃣ 认知偏差工具箱 — 游戏设计中的应用</h2>
+
+  <p>以下认知偏差是游戏设计中<strong>最高频使用</strong>的心理学武器。注意：使用它们要对玩家体验负责。</p>
+
+  <div class="concept-card">
+    <h3>1️⃣ 损失厌恶 (Loss Aversion)</h3>
+    <p>失去的痛苦 ≈ 得到的快乐的 <strong>2 倍</strong>。这是游戏设计中最强大的心理学武器。</p>
+    <table>
+      <thead><tr><th>游戏应用</th><th>原理</th></tr></thead>
+      <tbody>
+        <tr><td>每日签到</td><td>今天不来？你损失了 100 钻石，永远拿不回来了</td></tr>
+        <tr><td>限时礼包</td><td>24 小时后消失，不买就是损失</td></tr>
+        <tr><td>赛季通行证</td><td>已经买了，不打完就浪费了</td></tr>
+        <tr><td>保护期 (如 COC)</td><td>被攻击会损失资源，所以得回来收菜</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="concept-card">
+    <h3>2️⃣ 沉没成本 (Sunk Cost)</h3>
+    <p>投入越多，越难放弃。这是为什么老游戏很难弃坑的心理原因。</p>
+    <table>
+      <thead><tr><th>游戏应用</th><th>原理</th></tr></thead>
+      <tbody>
+        <tr><td>等级系统</td><td>"我都练到 80 级了，删号重新开始？不可能的"</td></tr>
+        <tr><td>长期任务链</td><td>"七天签到最后一天，今天不去就前功尽弃了"</td></tr>
+        <tr><td>公会/社交关系</td><td>"我在这公会待了两年，大家都认识我"</td></tr>
+        <tr><td>角色收集</td><td>"只差一个角色就全图鉴了，氪！"</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="concept-card">
+    <h3>3️⃣ 随机奖励 (Variable Rewards)</h3>
+    <p>不确定的奖励比确定的奖励更能激发多巴胺。这是 Skinner Box 的原理。</p>
+
+    <table>
+      <thead><tr><th>奖励模式</th><th>上瘾程度</th><th>游戏例</th></tr></thead>
+      <tbody>
+        <tr><td>固定比例</td><td>⭐⭐</td><td>每打 10 个怪掉 1 件装备</td></tr>
+        <tr><td>固定间隔</td><td>⭐</td><td>每小时恢复 1 个体力</td></tr>
+        <tr><td>随机比例 ← <strong>最上瘾</strong></td><td>⭐⭐⭐⭐⭐</td><td>抽卡、开箱、随机掉落</td></tr>
+        <tr><td>随机间隔</td><td>⭐⭐⭐</td><td>随机的"惊喜礼包"弹出</td></tr>
+      </tbody>
+    </table>
+
+    <blockquote class="warn">
+      <strong>⚠️ 伦理问题：</strong>随机奖励机制和"老虎机"共享同一套心理学原理。过度依赖会导致道德争议和法律风险（如中国、日本、比利时的抽卡法规）。<strong>好策划负责任地使用心理学，而不是滥用。</strong>
+    </blockquote>
+  </div>
+
+  <div class="concept-card">
+    <h3>4️⃣ 蔡格尼克效应 (Zeigarnik Effect)</h3>
+    <p>人们对未完成的任务记忆更深。大脑会持续"后台运行"未完成的事情。</p>
+    <ul>
+      <li><strong>进度条</strong>：看到 87% 的任务进度，你会忍不住去完成</li>
+      <li><strong>小红点</strong>：红点没点掉，心理不舒服</li>
+      <li><strong>未完成就</strong>："还差 3 个成就就白金了"</li>
+      <li><strong>关卡断点</strong>：《糖果粉碎传奇》在下一关开始前停下——你总是想打"下一把"</li>
+    </ul>
+  </div>
+
+  <div class="concept-card">
+    <h3>5️⃣ 禀赋效应 (Endowment Effect)</h3>
+    <p>一旦你拥有某样东西，你给它的估值会立刻上升。</p>
+    <ul>
+      <li><strong>初始角色抽卡</strong>：一开始送你 10 连抽，不论抽到什么你都更愿意留下来</li>
+      <li><strong>自定义角色</strong>：自己捏的脸，舍不得删</li>
+      <li><strong>试玩/试用</strong>：给你试用 VIP 功能 3 天，失去时痛苦比得到时快乐更大</li>
+    </ul>
+  </div>
+
+  <div class="concept-card">
+    <h3>6️⃣ 锚定效应 (Anchoring)</h3>
+    <p>第一个信息（锚点）会影响后续所有决策。</p>
+    <ul>
+      <li><strong>定价策略</strong>：原价 648 → 限时 328，让 328 看起来"划算"</li>
+      <li><strong>礼包对比</strong>：放一个性价比低的礼包在旁边，另一个就显得很值</li>
+      <li><strong>折扣显示</strong>："原价 100，现价 30——省了 70！"而不是"只需付 30"</li>
+    </ul>
+  </div>
+
+  <div class="concept-card">
+    <h3>7️⃣ 社会证明 (Social Proof)</h3>
+    <p>人们会模仿他人的行为，尤其在不确定时。</p>
+    <ul>
+      <li><strong>系统公告</strong>："玩家 XXX 抽到了 SSR！"—刺激你跟着抽</li>
+      <li><strong>排行榜</strong>：看到前排的装备和战力，你有了追赶目标</li>
+      <li><strong>好友动态</strong>："你的好友小明通关了第 10 章"→ 你会想跟上进度</li>
+      <li><strong>世界聊天</strong>：大家都在活跃中，你就不想下线</li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 4: Flow -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>3️⃣ 心流与留存</h2>
+
+  <div class="concept-card">
+    <h3>🌊 心流理论 (Flow)</h3>
+    <p>Mihaly Csikszentmihalyi 提出的心流状态——挑战与技能的最佳匹配：</p>
+
+    <div style="margin:1.5rem auto; max-width:400px; padding:1.5rem; background:white; border:2px solid var(--color-line); border-radius:12px;">
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <div style="font-size:0.85rem; color:var(--color-bad); font-weight:700;">焦虑 😰</div>
+        <div style="width:200px; height:40px; background:linear-gradient(90deg, #fee2e2, #fff); border-radius:4px; margin:0.3rem 0; position:relative;">
+          <div style="position:absolute; right:-5px; top:10px; font-size:1.5rem; color:var(--color-accent);">🧘 心流</div>
+        </div>
+        <div style="width:200px; height:60px; background:var(--color-accent); border-radius:4px; opacity:0.7;"></div>
+        <div style="width:200px; height:40px; background:linear-gradient(90deg, #fff, #dbeafe); border-radius:4px; margin:0.3rem 0; position:relative;">
+          <div style="position:absolute; left:-5px; top:10px; font-size:1.5rem; color:var(--color-muted);">😴 无聊</div>
+        </div>
+        <div style="font-size:0.85rem; color:var(--color-good); font-weight:700;">无聊 📉</div>
+        <div style="margin-top:0.5rem; font-size:0.75rem; text-align:center; color:var(--color-muted);">
+          挑战 ≈ 技能 → 心流通道<br>
+          越往右上难度越高
+        </div>
+      </div>
+    </div>
+
+    <p><strong>心流的关键</strong>：随着玩家技能提升，游戏挑战也随之提升。<strong>节奏感</strong>比"难度"更重要。</p>
+
+    <p><strong>应用实例</strong>：</p>
+    <table>
+      <thead><tr><th>游戏</th><th>如何管理心流</th></tr></thead>
+      <tbody>
+        <tr><td><strong>《蔚蓝 Celeste》</strong></td><td>每个章节引入一个新机制 → 低难度练习 → 高难度考验 → 下一章新机制</td></tr>
+        <tr><td><strong>《原神》</strong></td><td>世界等级可以手动调整，让探索体验匹配你的角色强度</td></tr>
+        <tr><td><strong>《COC》</strong></td><td>匹配机制确保你打的对手和你实力相近</td></tr>
+        <tr><td><strong>《节奏天国》</strong></td><td>失败 → 重复练习 → 过关 → 更难关卡。每关只教一个节奏型</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="concept-card">
+    <h3>🧪 内在动机 vs 外在动机</h3>
+
+    <table>
+      <thead><tr><th></th><th>内在动机</th><th>外在动机</th></tr></thead>
+      <tbody>
+        <tr><td><strong>来源</strong></td><td>因为好玩而玩</td><td>为了奖励而玩</td></tr>
+        <tr><td><strong>持续性</strong></td><td>强 — 乐趣本身驱动</td><td>弱 — 奖励消失即停止</td></tr>
+        <tr><td><strong>体验质量</strong></td><td>心流、创造感</td><td>打工感、依赖</td></tr>
+        <tr><td><strong>典型游戏</strong></td><td>塞尔达、Minecraft</td><td>三消、挂机游戏</td></tr>
+      </tbody>
+    </table>
+
+    <div class="insight">
+      <strong>过度合理化效应 (Overjustification Effect)</strong>
+      如果给一个本来靠内在动机驱动的行为添加过多的外在奖励，<strong>玩家会逐渐忘记"因为好玩"而玩</strong>，变得"不给奖励就不玩了"。<br><br>
+      <strong>例子</strong>：一个本来很好玩的 PvP 模式，硬加每日任务→玩家变成"为了完成任务而打"→乐趣下降→最终流失。
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 5: Case Studies -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>4️⃣ 真实案例</h2>
+
+  <div class="case-study">
+    <h3 style="margin-top:0;">📋 案例 1：《原神》的每日任务心理学</h3>
+    <p><strong>设计：</strong>每天 4 个日常任务，完成后获得原石。4 个都做完另有额外奖励。</p>
+    <p><strong>心理学分析：</strong></p>
+    <ul>
+      <li><strong>损失厌恶</strong>：每天最多损失 60 原石——不多不少，刚好让你心疼</li>
+      <li><strong>蔡格尼克效应</strong>：4 个任务做完才给额外奖励，"差一个没做"的感觉很难受</li>
+      <li><strong>习惯绑定</strong>：每天 10-15 分钟，形成"刷牙式"的日常习惯</li>
+      <li><strong>沉没成本</strong>：连续登录天数越多，越舍不得断签</li>
+    </ul>
+    <p><strong>效果：</strong>原神的 30 日留存远超行业平均。每日任务是核心原因之一。</p>
+  </div>
+
+  <div class="case-study">
+    <h3 style="margin-top:0;">📋 案例 2：《FGO》——不卖数值卖角色</h3>
+    <p><strong>背景：</strong>FGO 作为一款抽卡手游，抽到的角色"强度"非常保守，很多最强的角色反而是四星。</p>
+    <p><strong>心理学分析：</strong></p>
+    <ul>
+      <li><strong>禀赋效应</strong>：你抽到的角色你"爱"，即使强度不高也会上场</li>
+      <li><strong>自我决定论 — 归属感</strong>：角色是 IP 的一部分，你抽到的是"陪我冒险的伙伴"</li>
+      <li><strong>避免过度合理化</strong>：不卖数值 = 玩家不会因为版本更替而弃坑</li>
+    </ul>
+    <p><strong>效果：</strong>运营 9 年后依然在日本收入榜 top 20。核心付费驱动力是"爱"而非"强度"。</p>
+  </div>
+
+  <div class="case-study">
+    <h3 style="margin-top:0;">📋 案例 3：《糖果粉碎传奇》的"致命一关"</h3>
+    <p><strong>设计：</strong>在特定关卡难度突然飙升（需要多次尝试才能过）。</p>
+    <p><strong>心理学分析：</strong></p>
+    <ul>
+      <li><strong>蔡格尼克效应</strong>：卡在一关 3 天了，睡觉都会想</li>
+      <li><strong>沉没成本</strong>：已经卡了这么久，弃坑感觉亏了</li>
+      <li><strong>随机奖励</strong>：每打一次都有"这次可能就过了"的期待</li>
+      <li><strong>付费触发</strong>：卡关 → 买道具 → 过关 → 后面继续卡 → 再买</li>
+    </ul>
+    <p><strong>伦理争议：</strong>这被称为"剥削性设计"(exploitative design)。在游戏行业内部有巨大争议。</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 6: Practice -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>🛠️ 实践练习</h2>
+
+  <div class="exercise">
+    <h3>✏️ 练习：分析一款游戏的心理学设计</h3>
+    <p>选一款你正在玩或熟悉的游戏，回答三个问题：</p>
+
+    <div class="step">
+      <strong>步骤 1：玩家画像</strong>
+      <p>这款游戏主要吸引哪种 Bartle 类型的玩家？它用了什么系统来满足他们？</p>
+    </div>
+
+    <div class="step">
+      <strong>步骤 2：认知偏差</strong>
+      <p>找出游戏中使用的至少 <strong>3 种</strong> 认知偏差，具体说明用在什么地方。</p>
+    </div>
+
+    <div class="step">
+      <strong>步骤 3：心流管理</strong>
+      <p>这款游戏如何管理难度曲线？有没有让你感觉"焦虑"或"无聊"的时刻？</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 7: Quiz -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>🧪 知识测验</h2>
+
+  <div class="quiz">
+    <h3>问题 1</h3>
+    <p class="quiz-question">以下哪个行为最能体现 <strong>Bartle 分类中的"探索者"</strong>？</p>
+    <div class="quiz-options" data-quiz="q1">
+      <button class="quiz-btn" data-answer="wrong">冲击天梯排名，想成为全服第一</button>
+      <button class="quiz-btn" data-answer="correct">花 2 小时在地图上寻找隐藏洞穴和彩蛋</button>
+      <button class="quiz-btn" data-answer="wrong">加入最大的公会并组织公会活动</button>
+      <button class="quiz-btn" data-answer="wrong">在世界频道找人对战</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q1"></div>
+  </div>
+
+  <div class="quiz">
+    <h3>问题 2</h3>
+    <p class="quiz-question"><strong>损失厌恶</strong>指的是什么？</p>
+    <div class="quiz-options" data-quiz="q2">
+      <button class="quiz-btn" data-answer="wrong">人们喜欢随机奖励</button>
+      <button class="quiz-btn" data-answer="wrong">人们习惯模仿别人的行为</button>
+      <button class="quiz-btn" data-answer="correct">失去的痛苦 ≈ 得到的快乐的 2 倍</button>
+      <button class="quiz-btn" data-answer="wrong">投入越多越难放弃</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q2"></div>
+  </div>
+
+  <div class="quiz">
+    <h3>问题 3</h3>
+    <p class="quiz-question">FGO 运营 9 年依然成功，其付费心理学核心是什么？</p>
+    <div class="quiz-options" data-quiz="q3">
+      <button class="quiz-btn" data-answer="wrong">卖数值强度，让玩家不断追版本</button>
+      <button class="quiz-btn" data-answer="wrong">卖礼包打折，刺激消费</button>
+      <button class="quiz-btn" data-answer="correct">卖角色/IP 情感价值，驱动"为爱付费"</button>
+      <button class="quiz-btn" data-answer="wrong">高频率的限时促销活动</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q3"></div>
+  </div>
+
+  <div class="quiz">
+    <h3>问题 4</h3>
+    <p class="quiz-question">以下哪种做法利用了 <strong>蔡格尼克效应</strong>？</p>
+    <div class="quiz-options" data-quiz="q4">
+      <button class="quiz-btn" data-answer="wrong">首充双倍重置</button>
+      <button class="quiz-btn" data-answer="correct">任务进度显示"87/100"，小红点一直亮着</button>
+      <button class="quiz-btn" data-answer="wrong">世界频道显示"XXX 抽到了传说角色"</button>
+      <button class="quiz-btn" data-answer="wrong">免费试用 VIP 功能 7 天</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q4"></div>
+  </div>
+
+  <div class="quiz">
+    <h3>问题 5</h3>
+    <p class="quiz-question">根据自我决定论(SDT)，以下哪个游戏行为满足了"胜任感"需求？</p>
+    <div class="quiz-options" data-quiz="q5">
+      <button class="quiz-btn" data-answer="wrong">可以和好友一起组队</button>
+      <button class="quiz-btn" data-answer="correct">经过反复练习终于击败了之前过不去的 Boss</button>
+      <button class="quiz-btn" data-answer="wrong">可以自由选择任务顺序</button>
+      <button class="quiz-btn" data-answer="wrong">游戏里的角色很好看</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q5"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 8: Resources -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>📚 深入学习推荐</h2>
+
+  <div class="primary-source">
+    <h3>📖 必读书籍</h3>
+
+    <div class="source-item">
+      <span class="emoji">1</span>
+      <div>
+        <strong>《游戏设计艺术》 (The Art of Game Design) — Jesse Schell</strong><br>
+        第 12-16 章：玩家的动机、体验、情感分析。每个章节都有一个"透镜"供你分析游戏。
+      </div>
+    </div>
+
+    <div class="source-item">
+      <span class="emoji">2</span>
+      <div>
+        <strong>《游戏化实战》 (Actionable Gamification) — Yu-kai Chou</strong><br>
+        Octalysis 八维度框架的提出者。最系统地解释了游戏化设计中的心理驱动力。
+      </div>
+    </div>
+
+    <div class="source-item">
+      <span class="emoji">3</span>
+      <div>
+        <strong>《上瘾》 (Hooked) — Nir Eyal</strong><br>
+        触发 → 行动 → 多变的奖励 → 投入。产品级的上瘾模型，游戏行业必读。
+      </div>
+    </div>
+
+    <div class="source-item">
+      <span class="emoji">4</span>
+      <div>
+        <strong>《心流》 (Flow) — Mihaly Csikszentmihalyi</strong><br>
+        心流理论的原始著作。不只是游戏——关于人类最优体验的心理学经典。
+      </div>
+    </div>
+  </div>
+
+  <div class="primary-source">
+    <h3>🎬 视频与在线资源</h3>
+
+    <div class="source-item">
+      <span class="emoji">▶</span>
+      <div>
+        <strong>Quantic Foundry 官网</strong><br>
+        在线玩家动机测试和数据库。输入你的游戏可以获得"动机画像"。quantiefoundry.com
+      </div>
+    </div>
+
+    <div class="source-item">
+      <span class="emoji">▶</span>
+      <div>
+        <strong>GDC Talk: "Psychology of Play"</strong><br>
+        GDC 经典演讲，关于如何用心理学提升玩家留存。
+      </div>
+    </div>
+
+    <div class="source-item">
+      <span class="emoji">▶</span>
+      <div>
+        <strong>Extra Credits: "Player Types" 系列</strong><br>
+        YouTube 上最好的游戏设计心理学入门视频系列。
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 9: Check Understanding -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>✅ 检验理解</h2>
+
+  <div class="check-questions">
+    <p>在继续之前，请思考以下问题：</p>
+
+    <ol>
+      <li>
+        <strong>你玩得最多的游戏主要吸引哪种 Bartle 类型？它的核心系统是如何服务这种类型的？</strong>
+      </li>
+      <li>
+        <strong>选择一种认知偏差，描述你见过的一款游戏是如何使用它的。这个使用是"负责任"的，还是"剥削性"的？为什么？</strong>
+        <br><small style="color:var(--color-muted);">提示：损失厌恶、沉没成本、随机奖励、社会证明等</small>
+      </li>
+      <li>
+        <strong>如果一个游戏的难度曲线设计得不好，导致玩家前 10 分钟觉得太复杂、第 2 小时觉得太简单、到第 20 小时觉得太难——分别对应心流理论的什么问题？</strong>
+      </li>
+    </ol>
+  </div>
+
+  <!-- ═══ Footer ═══ -->
+  <div class="lesson-footer">
+    <p>Module 2 结束 · 玩家心理学</p>
+    <p>📖 下一课：Module 3 — 游戏经济设计</p>
+    <p style="font-size:0.8rem; margin-top:0.5rem;">
+      有问题？回到 Agent 对话中提问！
+    </p>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll('.quiz-options').forEach(function(container) {
+  var quizId = container.dataset.quiz;
+  var feedback = document.getElementById('feedback-' + quizId);
+  var answered = false;
+
+  container.querySelectorAll('.quiz-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      if (answered) return;
+      answered = true;
+
+      var isCorrect = btn.dataset.answer === 'correct';
+
+      container.querySelectorAll('.quiz-btn').forEach(function(b) {
+        b.disabled = true;
+        if (b === btn) {
+          b.classList.add(isCorrect ? 'correct' : 'incorrect');
+          if (!isCorrect) {
+            container.querySelectorAll('.quiz-btn').forEach(function(cb) {
+              if (cb.dataset.answer === 'correct') cb.classList.add('correct');
+            });
+          }
+        }
+      });
+
+      feedback.className = 'quiz-feedback show ' + (isCorrect ? 'correct' : 'incorrect');
+      feedback.textContent = isCorrect ? '✅ 答对了！' : '❌ 再想想。';
+    });
+  });
+});
+</script>
+
+</body>
+</html>
