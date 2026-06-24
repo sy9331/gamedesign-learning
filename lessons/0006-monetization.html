@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 6: 商业化思维 — 战略型游戏策划</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="lesson-meta">Module 6 · 商业化思维 · 预计阅读 30 分钟</div>
+  <h1>💎 商业化思维：让玩家开心地付钱</h1>
+  <p style="font-size:1.1rem; color: var(--color-muted); margin-bottom: 2em;">
+    最好的商业化设计是——玩家付了钱，还觉得自己赚了。
+  </p>
+
+  <div class="progress-section">
+    <div style="display:flex; justify-content:space-between; font-family:var(--font-heading); font-size:0.8rem; margin-bottom:0.3rem;">
+      <span>学习进度</span>
+      <span>8 个模块 · 当前: 6/8</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" style="width:75%"></div>
+    </div>
+    <div class="progress-labels">
+      <span>系统思维</span>
+      <span>玩家心理学</span>
+      <span>经济设计</span>
+      <span>内容规划</span>
+      <span>决策能力</span>
+      <span style="font-weight:700; color:var(--color-accent);">商业化 ◀</span>
+      <span>长线运营</span>
+      <span>产品分析</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 1: WHY -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>🎯 为什么商业化思维很重要（也很容易被学歪）？</h2>
+
+  <div class="case-study">
+    <p>行业里有一个很有意思的现象：</p>
+    <p><strong>顶尖的商业化设计</strong>——比如《原神》的月卡、《Fortnite》的 Battle Pass、《COC》的加速道具——玩家付了钱，还觉得"这个设计得很良心"。</p>
+    <p><strong>糟烂的商业化设计</strong>——弹窗礼包、648 直购、逼氪关卡——玩家付了钱，但觉得自己被当韭菜了。</p>
+    <p>区别在哪儿？不是"有没有付费"——而是<strong>付费是否提升了玩家的体验</strong>。</p>
+  </div>
+
+  <div class="insight">
+    <strong>核心洞察</strong>
+    好的商业化 = <em>付费提升了游戏体验</em>。<br>
+    坏的商业化 = <em>付费填补了故意制造的问题</em>。<br>
+    一个让玩家感谢你，一个让玩家恨你。<strong>选择权在你手里。</strong>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 2: Pay Pyramid -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>1️⃣ 付费金字塔</h2>
+
+  <p>所有 F2P 游戏的付费点可以按"健康度"分层：</p>
+
+  <div style="margin:1.5rem auto; max-width:480px;">
+    <div style="padding:1rem; margin:0.3rem 0; border-radius:8px; background:linear-gradient(135deg, #fef3c7, #fde68a); border:2px solid #f59e0b; text-align:center;">
+      <strong style="color:#92400e;">💎 炫耀付费</strong>
+      <p style="font-size:0.85rem; margin:0.2rem 0 0; color:#78350f;">外观·称号·限定·社交地位<br>✅ 最健康——不影响游戏平衡</p>
+    </div>
+    <div style="padding:1rem; margin:0.3rem 0; border-radius:8px; background:linear-gradient(135deg, #fef2f2, #fecaca); border:2px solid #ef4444; text-align:center;">
+      <strong style="color:#991b1b;">⚔️ 强度付费</strong>
+      <p style="font-size:0.85rem; margin:0.2rem 0 0; color:#7f1d1d;">数值·属性·效率<br>⚠️ 需要谨慎——影响公平性</p>
+    </div>
+    <div style="padding:1rem; margin:0.3rem 0; border-radius:8px; background:linear-gradient(135deg, #f0fdf4, #bbf7d0); border:2px solid #22c55e; text-align:center;">
+      <strong style="color:#166534;">🛠️ 便利付费</strong>
+      <p style="font-size:0.85rem; margin:0.2rem 0 0; color:#14532d;">体力·加速·背包·自动<br>✅ 良性——省时间而非碾压他人</p>
+    </div>
+    <div style="padding:1rem; margin:0.3rem 0; border-radius:8px; background:linear-gradient(135deg, #dbeafe, #93c5fd); border:2px solid #3b82f6; text-align:center;">
+      <strong style="color:#1e40af;">🌟 体验付费</strong>
+      <p style="font-size:0.85rem; margin:0.2rem 0 0; color:#1e3a8a;">游戏本体·通行证·月卡<br>✅ 最基础——门槛型付费</p>
+    </div>
+  </div>
+
+  <p><strong>每上一层，对游戏的"破坏性"就越大。</strong></p>
+
+  <table>
+    <thead><tr><th>付费类型</th><th>玩家感受</th><th>对游戏生态影响</th><th>健康度</th></tr></thead>
+    <tbody>
+      <tr><td>卖外观</td><td>"我好好看"</td><td>不影响其他玩家</td><td>✅ 最健康</td></tr>
+      <tr><td>卖便利</td><td>"省了好多时间"</td><td>轻度加速，可追赶</td><td>✅ 良性</td></tr>
+      <tr><td>卖数值</td><td>"我比免费玩家强"</td><td>制造差距，影响公平</td><td>⚠️ 需谨慎</td></tr>
+      <tr><td>卖通关</td><td>"不付钱过不去"</td><td>破坏核心循环</td><td>❌ 剥削性</td></tr>
+    </tbody>
+  </table>
+
+  <blockquote class="good">
+    <strong>行业金句：</strong>"当一个玩家付了钱觉得自己很聪明——那是好的商业化。当一个玩家付了钱觉得自己很蠢——那是坏的商业化。"
+  </blockquote>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 3: Monetization Models -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>2️⃣ 五大战术付费模式</h2>
+
+  <div class="concept-card">
+    <h3>模式 1：月卡</h3>
+    <p>每月固定付费 → 每日领取小额奖励。</p>
+    <p><strong>为什么有效：</strong></p>
+    <ul>
+      <li><strong>损失厌恶</strong>：每天上线领，断一天就亏了</li>
+      <li><strong>降低决策门槛</strong>：30 元 vs 648 元——买月卡不需要纠结</li>
+      <li><strong>习惯绑定</strong>：买月卡 → 每天上线 → 习惯形成</li>
+    </ul>
+    <p><strong>行业数据：</strong>月卡玩家占比越高的游戏，收入越稳定。（原神的月卡/纪行收入占比约 40-50%）</p>
+  </div>
+
+  <div class="concept-card">
+    <h3>模式 2：Battle Pass（通行证）</h3>
+    <p>赛季制付费 + 活跃度驱动的奖励解锁。</p>
+    <p><strong>为什么有效：</strong></p>
+    <ul>
+      <li><strong>付费 + 活跃双重驱动</strong></li>
+      <li><strong>双轨制</strong>：免费轨 = 钩子，付费轨 = 转化</li>
+      <li><strong>沉没成本</strong>：买了不打完就浪费了</li>
+    </ul>
+    <blockquote class="warn">
+      <strong>设计要点：</strong>免费轨要给玩家"够用"的奖励，而不是"不付费就不能玩"。<br>
+      让付费轨显得"超值"而不是"必须"。
+    </blockquote>
+  </div>
+
+  <div class="concept-card">
+    <h3>模式 3：限时礼包</h3>
+    <p>特定时间（升级/过关/节日）弹出的限时优惠。</p>
+    <p><strong>关键技巧：</strong></p>
+    <ul>
+      <li><strong>时机要对</strong>——在玩家刚感受到"需要"时弹出（不是一进游戏就弹）</li>
+      <li><strong>对比效应</strong>——旁边放一个性价比低的礼包，另一个看起来超值</li>
+      <li><strong>限时感</strong>——"仅剩 2 小时"（但不要滥用，会降低信任）</li>
+    </ul>
+  </div>
+
+  <div class="concept-card">
+    <h3>模式 4：抽卡/Gacha</h3>
+    <p>随机获得奖励的付费模式。过 Module 2 已经讨论过它的心理学原理。</p>
+    <p><strong>健康设计要点：</strong></p>
+    <ul>
+      <li><strong>透明概率</strong>——公开且真实</li>
+      <li><strong>绝对保底</strong>——无论多非，最终能拿到</li>
+      <li><strong>不卖必需</strong>——抽卡内容是"增强"而非"必须"</li>
+      <li><strong>免费玩家也能攒</strong>——核心循环可以产出抽卡资源</li>
+    </ul>
+  </div>
+
+  <div class="concept-card">
+    <h3>模式 5：广告变现</h3>
+    <p>免费玩家看广告 → 你获得收入。</p>
+    <ul>
+      <li><strong>激励广告</strong>："看 30 秒视频，获得双倍奖励"</li>
+      <li><strong>插屏广告</strong>：关卡之间的短暂广告</li>
+      <li><strong>关键原则</strong>：广告不应该打断核心体验</li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 4: Player Journey -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>3️⃣ 免费玩家的付费转化路径</h2>
+
+  <p>好的商业化不是"让玩家付钱"，而是"让玩家想要付钱"。</p>
+
+  <div class="loop-diagram" style="max-width:450px;">
+    <div style="display:flex; flex-direction:column; gap:0.5rem; align-items:center;">
+      <span class="node neutral">🎮 体验乐趣</span>
+      <span class="arrow">↓</span>
+      <span class="node neutral">🚧 遇到瓶颈</span>
+      <span class="arrow">↓</span>
+      <span class="node positive">💡 感受到"付费能解决问题"</span>
+      <span class="arrow">↓</span>
+      <span class="node positive">💳 第一次付费（低门槛转化）</span>
+      <span class="arrow">↓</span>
+      <span class="node neutral">😊 获得正向体验提升</span>
+      <span class="arrow">↓</span>
+      <span class="node accent">🔄 付费习惯形成</span>
+    </div>
+  </div>
+
+  <p><strong>关键节点：第一次付费</strong></p>
+  <p>第一次付费是最难的。一旦玩家突破了"我在这个游戏花钱了"的心理门槛，后续付费会容易很多。</p>
+  <ul>
+    <li><strong>首充礼包</strong>：1 元、6 元这种极低门槛（比月卡更低）</li>
+    <li><strong>首充双倍</strong>：让第一次付费显得"超值"</li>
+    <li><strong>关键：第一次付费后玩家的体验必须明显提升</strong>——否则他会后悔，下次不会再付</li>
+  </ul>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 5: Case Study -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>4️⃣ 深度案例分析</h2>
+
+  <div class="case-study">
+    <h3 style="margin-top:0;">📋 《原神》商业化拆解</h3>
+    <p><strong>收入结构（估算）：</strong></p>
+    <ul>
+      <li>月卡（30 元/月）— 约 35%</li>
+      <li>纪行/Battle Pass（68 元/版）— 约 15%</li>
+      <li>抽卡（角色/武器池）— 约 45%</li>
+      <li>其他（礼包、皮肤）— 约 5%</li>
+    </ul>
+    <p><strong>为什么它成功：</strong></p>
+    <ol>
+      <li><strong>月卡是"完美的首充"</strong>——30 元，低门槛，每天 90 原石，连续 30 天。玩家觉得超值</li>
+      <li><strong>纪行是"不卖数值的 BP"</strong>——送的是养成材料而非强度。不买也能玩，买了轻松点</li>
+      <li><strong>抽卡卖的是"爱"而非"必须"</strong>——零命角色完全可玩，命座是锦上添花</li>
+      <li><strong>免费玩家能攒够抽卡资源</strong>——月卡加上日常，2-3 个月能攒出一个保底</li>
+    </ol>
+    <p><strong>商业化健康度的体现：</strong></p>
+    <ul>
+      <li>免费玩家照样可以打通全部内容</li>
+      <li>付费玩家买的是"更多选择"而非"不买就玩不了"</li>
+      <li>大部分玩家自愿付费而非被逼付费</li>
+    </ul>
+    <blockquote class="good">
+      <strong>💡 最关键的设计：</strong>原神的商业化都是"增强体验"而非"解决痛苦"。你抽不到某个角色，不会玩不下去。你抽到了，会玩得更开心。<strong>这就是健康商业化的标志。</strong>
+    </blockquote>
+  </div>
+
+  <div class="case-study">
+    <h3 style="margin-top:0;">📋 Fortnite 的"全皮肤"商业化</h3>
+    <p><strong>核心模式：</strong>卖皮肤、卖 BP、卖表情。不卖任何数值。</p>
+    <ul>
+      <li>所有玩家在同一起跑线（枪的伤害一样）</li>
+      <li>付费玩家区别在于"看起来怎么样"</li>
+      <li>BP 给的是外观道具 + V-Bucks（可以买下一季的 BP）</li>
+    </ul>
+    <p><strong>效果：</strong>Fortnite 是历史上最赚钱的游戏之一（累计收入超 200 亿美元），但它的商业化完全是<strong>"卖外观"</strong>的模式。</p>
+    <p><strong>启示：</strong>不卖数值的游戏也能赚大钱。问题的关键不是"卖什么"，而是"你的游戏够不够好，让玩家愿意为它打扮"。</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 6: Practice -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>🛠️ 实践练习</h2>
+
+  <div class="exercise">
+    <h3>✏️ 练习：分析一款游戏的商业化</h3>
+
+    <div class="step">
+      <strong>步骤 1：列出付费点</strong>
+      <p>列出你熟悉的一款游戏的所有付费点，按"炫耀/强度/便利/体验"四个类型分类。</p>
+    </div>
+
+    <div class="step">
+      <strong>步骤 2：分析健康度</strong>
+      <p>哪些付费点是"增强体验"的？哪些是"解决痛苦"的？比例如何？</p>
+    </div>
+
+    <div class="step">
+      <strong>步骤 3：付费路径检查</strong>
+      <p>尝试走一遍免费玩家→付费玩家的转化路径。第一次付费的门槛有多高？第一笔付费后体验提升了吗？</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 7: Quiz -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>🧪 知识测验</h2>
+
+  <div class="quiz">
+    <h3>问题 1</h3>
+    <p class="quiz-question">以下哪种付费点属于"最健康"的商业化设计？</p>
+    <div class="quiz-options" data-quiz="q1">
+      <button class="quiz-btn" data-answer="wrong">第 5 关必须付费才能通过</button>
+      <button class="quiz-btn" data-answer="wrong">VIP 等级提升属性 50%</button>
+      <button class="quiz-btn" data-answer="correct">限定皮肤，仅外观无属性加成</button>
+      <button class="quiz-btn" data-answer="wrong">每天只能免费打 3 次副本，更多需付费</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q1"></div>
+  </div>
+
+  <div class="quiz">
+    <h3>问题 2</h3>
+    <p class="quiz-question">月卡之所以是"最佳首充"，主要原因是？</p>
+    <div class="quiz-options" data-quiz="q2">
+      <button class="quiz-btn" data-answer="wrong">月卡送的奖励最多</button>
+      <button class="quiz-btn" data-answer="correct">低门槛 + 每天上线形成习惯 + 损失厌恶（断签就亏了）</button>
+      <button class="quiz-btn" data-answer="wrong">月卡玩家可以碾压免费玩家</button>
+      <button class="quiz-btn" data-answer="wrong">月卡只需要付一次钱</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q2"></div>
+  </div>
+
+  <div class="quiz">
+    <h3>问题 3</h3>
+    <p class="quiz-question">好的商业化和坏的商业化的核心区别是？</p>
+    <div class="quiz-options" data-quiz="q3">
+      <button class="quiz-btn" data-answer="wrong">好的商业化赚的钱更多</button>
+      <button class="quiz-btn" data-answer="wrong">好的商业化付费项目更多</button>
+      <button class="quiz-btn" data-answer="correct">好的商业化是"增强体验"，坏的是"解决故意制造的问题"</button>
+      <button class="quiz-btn" data-answer="wrong">好的商业化只卖皮肤</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q3"></div>
+  </div>
+
+  <div class="quiz">
+    <h3>问题 4</h3>
+    <p class="quiz-question">Fortnite 的收入主要来自什么类型的付费？</p>
+    <div class="quiz-options" data-quiz="q4">
+      <button class="quiz-btn" data-answer="wrong">武器属性提升</button>
+      <button class="quiz-btn" data-answer="wrong">VIP 月卡</button>
+      <button class="quiz-btn" data-answer="correct">外观皮肤 + 战斗通行证（不卖任何数值）</button>
+      <button class="quiz-btn" data-answer="wrong">通关关卡付费</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q4"></div>
+  </div>
+
+  <div class="quiz">
+    <h3>问题 5</h3>
+    <p class="quiz-question">商业化设计中的"锚定效应"指的是什么？</p>
+    <div class="quiz-options" data-quiz="q5">
+      <button class="quiz-btn" data-answer="wrong">在玩家疲劳时弹出礼包</button>
+      <button class="quiz-btn" data-answer="correct">用一个高价锚点（648元）让中价（328元）看起来划算</button>
+      <button class="quiz-btn" data-answer="wrong">让玩家先免费体验再付费</button>
+      <button class="quiz-btn" data-answer="wrong">给玩家送优惠券</button>
+    </div>
+    <div class="quiz-feedback" id="feedback-q5"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 8: Resources -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>📚 深入学习推荐</h2>
+
+  <div class="primary-source">
+    <h3>📖 必读书籍</h3>
+
+    <div class="source-item">
+      <span class="emoji">1</span>
+      <div>
+        <strong>《游戏设计艺术》— Jesse Schell</strong><br>
+        第 18 章专门讲商业化，讨论"免费游戏"的设计伦理。
+      </div>
+    </div>
+
+    <div class="source-item">
+      <span class="emoji">2</span>
+      <div>
+        <strong>《F2P 游戏设计》— 多位作者</strong><br>
+        专门讲免费游戏的商业化设计。国内有翻译版。
+      </div>
+    </div>
+
+    <div class="source-item">
+      <span class="emoji">3</span>
+      <div>
+        <strong>《游戏运营：从入门到精通》— 饭大官人</strong><br>
+        有专门的商业化章节，讲礼包设计、定价策略、活动促销。
+      </div>
+    </div>
+  </div>
+
+  <div class="primary-source">
+    <h3>🎬 视频资源</h3>
+    <div class="source-item">
+      <span class="emoji">▶</span>
+      <div>
+        <strong>GDC Talk: "The Ethics of Free-to-Play"</strong><br>
+        F2P 商业化的伦理讨论——什么可以、什么不可以、什么是红线。
+      </div>
+    </div>
+    <div class="source-item">
+      <span class="emoji">▶</span>
+      <div>
+        <strong>Game Maker's Toolkit: "How Fortnite Makes Money"</strong><br>
+        把 Fortnite 的商业模式拆解得非常清楚。
+      </div>
+    </div>
+    <div class="source-item">
+      <span class="emoji">▶</span>
+      <div>
+        <strong>《原神商业化深度分析》— 知乎/哔站</strong><br>
+        搜索"原神商业化分析"，有很多数据翔实的文章。
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 9: Check Understanding -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <h2>✅ 检验理解</h2>
+
+  <div class="check-questions">
+    <p>在继续之前，请思考以下问题：</p>
+
+    <ol>
+      <li>
+        <strong>你见过最"良心"的商业化设计和最"坑"的商业化设计分别是什么？它们的核心区别在哪儿？</strong>
+      </li>
+      <li>
+        <strong>如果你要为你现在的游戏设计一个月卡，你的月卡里会包含什么内容？为什么？</strong>
+        <br><small style="color:var(--color-muted);">提示：考虑月卡玩家的心理预期（每天上线领取的价值感）</small>
+      </li>
+      <li>
+        <strong>免费游戏的"付费渗透率"健康范围是 5-15%。如果你的游戏渗透率只有 3%，你会优先从哪个方向去提升——降低付费门槛、增加付费价值、还是改善付费体验？为什么？</strong>
+      </li>
+    </ol>
+  </div>
+
+  <div class="lesson-footer">
+    <p>Module 6 结束 · 商业化思维</p>
+    <p>📖 下一课：Module 7 — 长线运营思维</p>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll('.quiz-options').forEach(function(container) {
+  var quizId = container.dataset.quiz;
+  var feedback = document.getElementById('feedback-' + quizId);
+  var answered = false;
+  container.querySelectorAll('.quiz-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      if (answered) return;
+      answered = true;
+      var isCorrect = btn.dataset.answer === 'correct';
+      container.querySelectorAll('.quiz-btn').forEach(function(b) {
+        b.disabled = true;
+        if (b === btn) {
+          b.classList.add(isCorrect ? 'correct' : 'incorrect');
+          if (!isCorrect) {
+            container.querySelectorAll('.quiz-btn').forEach(function(cb) {
+              if (cb.dataset.answer === 'correct') cb.classList.add('correct');
+            });
+          }
+        }
+      });
+      feedback.className = 'quiz-feedback show ' + (isCorrect ? 'correct' : 'incorrect');
+      feedback.textContent = isCorrect ? '✅ 答对了！' : '❌ 再想想。';
+    });
+  });
+});
+</script>
+
+</body>
+</html>
